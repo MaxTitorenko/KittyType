@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo&family=Jura:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="svg/paw.svg" />
+    <title>KittyType</title>
+</head>
+
+<body class="preload">
+
+    <div class="modal hidden" id="infoModal">
+        <div class="info-modal">
+            <div class="modal-close" id="closeInfo">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="info-head">Info</h1>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="settingsModal">
+        <div class="settings-modal">
+            <div class="modal-close" id="closeSettings">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="settings-head">Settings</h1>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="languageModal">
+        <div class="language-modal">
+            <div class="modal-close" id="closeLanguage">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="language-head">Language</h1>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header">
+            <a href="#">
+            <div class="logo">
+                <img src="svg/paw.svg" class="svg logo-paw">
+                <div class="logo-text">
+                    <h1 class="logo-bottom">KittyType</h1>
+                    <h2 class="logo-top">meow meow</h2>
+                </div>
+            </div>
+            </a>
+
+            <div class="header-side-menu">
+                <a href="" id="keyboardButton"><img src="svg/keyboard.svg" class="svg side-menu-svg"></a>
+                <a href="" id="infoButton"><img src="svg/info.svg" class="svg side-menu-svg"></a>
+                <a href="" id="settingsButton"><img src="svg/gear.svg" class="svg side-menu-svg gear-svg"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="interface">
+            <div class="interface-time">
+                <img src="svg/clock.svg" class="svg interface-svg">
+                <div class="interface-time-buttons">
+                    <form>
+                        <input type="radio" id="time15" name="time" class="interface-radio" checked>
+                        <label for="time15" class="interface-radio-text">15</label>
+
+                        <input type="radio" id="time30" name="time" class="interface-radio">
+                        <label for="time30" class="interface-radio-text">30</label>
+
+                        <input type="radio" id="time60" name="time" class="interface-radio">
+                        <label for="time60" class="interface-radio-text">60</label>
+                    </form>
+                </div>
+            </div>
+
+            <span class="interface-line"></span>
+
+            <div class="interface-diff">
+                <img src="svg/diff.svg" class="svg interface-svg">
+                <div class="interface-diff-buttons">
+                    <form>
+                        <input type="radio" id="diffEasy" name="diff" class="interface-radio" checked>
+                        <label for="diffEasy" class="interface-radio-text">Easy</label>
+
+                        <input type="radio" id="diffMedium" name="diff" class="interface-radio">
+                        <label for="diffMedium" class="interface-radio-text">Medium</label>
+
+                        <input type="radio" id="diffHard" name="diff" class="interface-radio">
+                        <label for="diffHard" class="interface-radio-text">Hard</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="lang-button-container">
+                <div class="lang-button" id="languageButton">
+                    <img src="svg/earth.svg" class="svg lang-svg">
+                    <h1 class="lang-button-text">Eng</h1>
+                </div>
+            </div>
+
+            <div class="input-container container">
+                <textarea class="input-window" id="textArea"></textarea>
+            </div>
+
+            <div class="replay-container">
+                <a href="" id="replayButton"><img src="svg/replay.svg" class="svg replay-svg"></a>
+            </div>
+        </div>
+
+        <div class="replay-hotkey-container">
+            <h1 class="hotkey-text"><span class="hotkey-decoration">F2</span> - Restart</h1>
+        </div>
+    </main>
+
+    <div class="moveable-keyboard hidden" id="keyboard">
+        <h1 class="keyboard-drag" id="keyboardDrag">Click here to drag</h1>
+        <div class="keyboard">
+            <div class="keyboard-row">
+
+                <div class="keyboard-key" id="keyQ">
+                    <h1 class="key-text">Q</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyW">
+                    <h1 class="key-text">W</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyE">
+                    <h1 class="key-text">E</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyR">
+                    <h1 class="key-text">R</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyT">
+                    <h1 class="key-text">T</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyY">
+                    <h1 class="key-text">Y</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyU">
+                    <h1 class="key-text">U</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyI">
+                    <h1 class="key-text">I</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyO">
+                    <h1 class="key-text">O</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyP">
+                    <h1 class="key-text">P</h1>
+                </div>
+
+                <div class="keyboard-key" id="key[">
+                    <h1 class="key-text">[{</h1>
+                </div>
+
+                <div class="keyboard-key" id="key]">
+                    <h1 class="key-text">]}</h1>
+                </div>
+
+            </div>
+
+            <div class="keyboard-row">
+
+                <div class="keyboard-key" id="keyA">
+                    <h1 class="key-text">A</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyS">
+                    <h1 class="key-text">S</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyD">
+                    <h1 class="key-text">D</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyF">
+                    <h1 class="key-text">F</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyG">
+                    <h1 class="key-text">G</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyH">
+                    <h1 class="key-text">H</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyJ">
+                    <h1 class="key-text">J</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyK">
+                    <h1 class="key-text">K</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyL">
+                    <h1 class="key-text">L</h1>
+                </div>
+
+                <div class="keyboard-key" id="key;">
+                    <h1 class="key-text">;:</h1>
+                </div>
+
+                <div class="keyboard-key" id="key'">
+                    <h1 class="key-text">'"</h1>
+                </div>
+
+            </div>
+
+            <div class="keyboard-row">
+
+                <div class="keyboard-key" id="keyZ">
+                    <h1 class="key-text">Z</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyX">
+                    <h1 class="key-text">X</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyC">
+                    <h1 class="key-text">C</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyV">
+                    <h1 class="key-text">V</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyB">
+                    <h1 class="key-text">B</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyN">
+                    <h1 class="key-text">N</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyM">
+                    <h1 class="key-text">M</h1>
+                </div>
+
+                <div class="keyboard-key" id="key,">
+                    <h1 class="key-text">,</h1>
+                </div>
+
+                <div class="keyboard-key" id="key.">
+                    <h1 class="key-text">.</h1>
+                </div>
+
+                <div class="keyboard-key" id="key?">
+                    <h1 class="key-text">/?</h1>
+                </div>
+
+            </div>
+
+            <div class="keyboard-row">
+                <div class="keyboard-key-space" id="keySpace">
+                    <h1 class="space-text">____</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="textGen.js"></script>
+    <script src="keyboard.js"></script>
+</body>
+</html>

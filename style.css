@@ -1,0 +1,396 @@
+/* Fonts
+font-family: 'Geo', sans-serif;
+font-family: 'Jura', sans-serif;
+*/
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #2D2F33;
+    --element-bg-color: #26282C;
+    --main-text-color: #fff;
+    --secondary-text-color: #AEAEAE;
+    --border-color: #BBBBBB;
+    --trigger-color: rgb(255, 72, 72);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    font-family: 'Jura', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.svg{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(2deg) brightness(102%) contrast(104%);
+}
+
+/* Utility */
+
+.hidden{
+    display: none;
+}
+
+/* Logo */
+
+.logo{
+    padding: 1em;
+    display: flex;
+    font-family: 'Geo', sans-serif;
+    transition: .5s color;
+}
+
+.logo-paw{
+    width: 60px;
+    height: 60px;
+    animation: pawAnim .5s alternate infinite;
+    animation-play-state: paused;
+}
+
+.logo:hover .logo-paw,
+.logo:focus .logo-paw{
+    animation-play-state: running;
+}
+
+.logo:hover{
+    color: var(--secondary-text-color);
+}
+
+.logo-text{
+    padding: 1em;
+}
+
+.logo-top{
+    margin-top: -4.5em;
+}
+
+.logo-bottom{
+    font-size: 3.125em;
+    margin-top: -.01em;
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-side-menu{
+    align-self: center;
+}
+
+.side-menu-svg{
+    width: 50px;
+    padding: 0 .5em;
+    transition: .3s filter;
+}
+
+.side-menu-svg:hover,
+.side-menu-svg:focus{
+    filter: invert(67%) sepia(34%) saturate(13%) hue-rotate(314deg) brightness(97%) contrast(92%);
+}
+
+.gear-svg{
+    animation: gearRotate 1s linear infinite;
+    animation-play-state: paused;
+}
+
+.gear-svg:hover,
+.gear-svg:focus{
+    animation-play-state: running;
+}
+
+/* Interface */
+
+.interface{
+    display: flex;
+    padding: .5em;
+    border: var(--border-color) 2px solid;
+    background-color: var(--element-bg-color);
+    border-radius: 50px;
+    font-weight: 600;
+    margin: 5em auto;
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.interface-time, .interface-diff{
+    display: flex;
+}
+
+.interface-time-buttons, .interface-diff-buttons{
+    align-self: center;
+}
+
+.interface-svg{
+    width: 30px;
+    height: 30px;
+    padding: 0 .3em;
+}
+
+.time-button, .diff-button{
+    padding: 0 .3em;
+    transition: .3s color;
+}
+
+.time-button:hover, .diff-button:hover,
+.time-button:focus, .diff-button:focus{
+    color: var(--secondary-text-color);
+}
+
+.interface-line{
+    content: "";
+    width: 3px;
+    height: 2em;
+    background: var(--border-color);
+    border-radius: 50px;
+    margin: 0 .3em;
+}
+
+.interface-radio{
+    appearance: none;
+}
+
+.interface-radio-text{
+    transition: .3s color;
+    cursor: pointer;
+}
+
+.interface-radio:checked + .interface-radio-text{
+    color: var(--secondary-text-color);
+}
+
+/* Language selector */
+
+.lang-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.lang-button{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+}
+
+.lang-button-text{
+    font-size: 1.75em;
+    font-weight: 600;
+    padding: 0 .5em;
+    transition: .3s color;
+}
+
+.lang-button:hover .lang-button-text,
+.lang-button:focus .lang-button-text{
+    color: var(--secondary-text-color);
+}
+
+.lang-svg{
+    width: 30px;
+    height: 30px;
+}
+
+/* Input */
+
+.input-container{
+    text-align: center;
+}
+
+.input-window{
+    padding: 1em 2em;
+    width: 100%;
+    background-color: var(--element-bg-color);
+    border: var(--border-color) 2px solid;
+    border-radius: 50px;
+    font-size: 1.75em;
+    min-height: 240px;
+    max-height: 240px;
+    max-width: 80%;
+    outline: none;
+    color: var(--secondary-text-color);
+    overflow: hidden;
+    resize: none;
+}
+
+/* Replay */
+
+.replay-container{
+    text-align: center;
+    padding: 2em 0;
+}
+
+.replay-svg{
+    width: 40px;
+    height: 40px;
+    transform: rotateX(360deg);
+    animation: replayAnim 1s alternate infinite;
+    animation-play-state: paused;
+}
+
+.replay-svg:hover{
+    animation-play-state: running;
+}
+
+.replay-hotkey-container{
+    padding: 5em 0;
+}
+
+.hotkey-text{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.hotkey-decoration{
+    background-color: var(--main-text-color);
+    color: var(--bg-color);
+    border-radius: 10px;
+    padding: 0 .2em;
+}
+
+/* Modals */
+
+.modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+.info-modal, .settings-modal, .language-modal{
+    border-radius: 50px;
+    width: 50%;
+    padding: 1em;
+    transform: translate(50%, 50%);
+    background-color: var(--bg-color);
+}
+
+.info-head, .settings-head, .language-head{
+    text-align: center;
+    margin-top: -1.35em;
+}
+
+.modal-close{
+    margin-left: auto;
+    cursor: pointer;
+    background-color: var(--secondary-text-color);
+    padding: .1em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color .5s;
+}
+
+.modal-close:hover, .modal-close:focus{
+    background-color: var(--main-text-color);
+}
+
+.modal-close-line-1, .modal-close-line-2{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--bg-color);
+    content: " ";
+    align-self: center;
+    right: 25px;
+    top: 40px;
+}
+
+.modal-close-line-1{
+    transform: rotateZ(45deg);
+}
+
+.modal-close-line-2{
+    transform: rotateZ(-45deg);
+}
+
+/* Moveable keyboard */
+
+.moveable-keyboard{
+    border-radius: 50px;
+    position: absolute;
+    padding: 1em;
+    background-color: var(--element-bg-color);
+    top: 200px;
+}
+
+.keyboard{
+    padding: 1em;
+    border: var(--border-color) 2px solid;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+.keyboard-row{
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard-key, .keyboard-key-space{
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    border: var(--border-color) 1px solid;
+    padding: .5em;
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 .3em;
+    margin-bottom: .5em;
+    font-size: .8em;
+}
+
+.space-text{
+    font-family: sans-serif;
+    margin-top: -.8em;
+}
+
+.keyboard-key-space{
+    min-width: 400px;
+}
+
+.key-text{
+    margin: 0;
+}
+
+.keyboard-drag{
+    font-size: 1.5em;
+    cursor: grabbing;
+    text-align: center;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+/* Animations */
+
+@keyframes gearRotate{
+    to {transform: rotate(360deg);}
+}
+
+@keyframes pawAnim{
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+@keyframes replayAnim{
+    to {transform: rotateZ(90deg);}
+}
+
+@keyframes keyPress{
+    to {background-color: var(--trigger-color);}
+}
