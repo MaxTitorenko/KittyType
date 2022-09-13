@@ -61,3 +61,118 @@ document.addEventListener('keyup', function(event){
         generate()
     }
 })
+
+diffEasy.addEventListener("click", function(){
+    generate()
+})
+
+diffMedium.addEventListener("click", function(){
+    generate()
+})
+
+diffHard.addEventListener("click", function(){
+    generate()
+})
+
+// textArea.addEventListener("keydown", function(event){
+//     console.log(event.key)
+//     if(event.key == text[0]){
+//         textArea.html.append = "<span class='correct'>"+event.key+"</span>"
+//     }
+// })
+
+let inputText = document.getElementById("inputText")
+let inputVerify = document.getElementById("inputVerify")
+
+inputCount = -1
+
+inputText.addEventListener("keydown", function(event){
+    inputCount += 1
+
+    if(event.key == text[inputCount]){
+        inputVerify.innerHTML += "<span class='correct'>"+text[inputCount]+"</span>"
+    }else{
+        inputVerify.innerHTML += "<span class='wrong'>"+text[inputCount]+"</span>"
+    }
+
+    console.log(inputCount)
+    
+})
+
+// Timer
+
+let resultModal = document.getElementById("resultModal")
+let closeResult = document.getElementById("closeResult")
+let textAreaTime = document.getElementById("textArea")
+let timer = document.getElementById("timer")
+
+let time15 = document.getElementById("time15"),
+    time30 = document.getElementById("time30"),
+    time60 = document.getElementById("time60")
+
+timeVal = 15
+
+function timing(time){
+
+    lvt = setInterval(function(){timer.textContent = timeVal - 1
+        timeVal -= 1}, 1000)
+    
+    setTimeout(function(){resultModal.classList.remove("hidden")
+        clearInterval(lvt)
+        generate()
+        inputText.value = ""
+        inputVerify.textContent = ""
+        inputCount = -1
+        if(time15.checked){
+            timer.textContent = 15
+        }else if(time30.checked){
+            timer.textContent = 30
+        }else if(time60.checked){
+            timer.textContent = 60
+        }
+        inputText.addEventListener("keydown", function(event){
+    
+            if(time15.checked){
+                timing(15000)
+                timeVal = 15
+            }else if(time30.checked){
+                timing(30000)
+                timeVal = 30
+            }else if(time60.checked){
+                timing(60000)
+                timeVal = 60
+            }
+            
+        }, {once:true})}, time)
+}
+
+inputText.addEventListener("keydown", function(event){
+    
+    if(time15.checked){
+        timing(15000)
+        timeVal = 15
+    }else if(time30.checked){
+        timing(30000)
+        timeVal = 30
+    }else if(time60.checked){
+        timing(60000)
+        timeVal = 60
+    }
+    
+}, {once:true})
+
+closeResult.addEventListener("click", function(){
+    resultModal.classList.add("hidden")
+})
+
+time15.addEventListener("click", function(){
+    timer.textContent = 15
+})
+
+time30.addEventListener("click", function(){
+    timer.textContent = 30
+})
+
+time60.addEventListener("click", function(){
+    timer.textContent = 60
+})

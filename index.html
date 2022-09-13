@@ -47,6 +47,17 @@
         </div>
     </div>
 
+    <div class="modal hidden" id="resultModal">
+        <div class="result-modal">
+            <div class="modal-close" id="closeResult">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="language-head">Results</h1>
+        </div>
+    </div>
+
     <header>
         <div class="container header">
             <a href="#">
@@ -106,7 +117,11 @@
         </div>
 
         <div>
-            <div class="lang-button-container">
+            <div class="lang-button-container container">
+                <div class="timer" >
+                    <h1>Timer: <span id="timer">15</span></h1>
+                </div>
+
                 <div class="lang-button" id="languageButton">
                     <img src="svg/earth.svg" class="svg lang-svg">
                     <h1 class="lang-button-text">Eng</h1>
@@ -115,6 +130,10 @@
 
             <div class="input-container container">
                 <textarea class="input-window" id="textArea"></textarea>
+                <div class="verify">
+                    <p class="input-window input-verify" id="inputVerify"></p>
+                </div>
+                <input type="text" id="inputText" class="input-text" placeholder="Click here to start typing">
             </div>
 
             <div class="replay-container">

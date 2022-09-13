@@ -19,6 +19,7 @@ body{
     background-color: var(--bg-color);
     color: var(--main-text-color);
     font-family: 'Jura', sans-serif;
+    overflow: hidden;
 }
 
 a{
@@ -39,6 +40,14 @@ a{
 
 .hidden{
     display: none;
+}
+
+.correct{
+    color: #20FF1C;
+}
+
+.wrong{
+    color: #FF4A4A;
 }
 
 /* Logo */
@@ -120,7 +129,7 @@ a{
     background-color: var(--element-bg-color);
     border-radius: 50px;
     font-weight: 600;
-    margin: 5em auto;
+    margin: 3em auto;
     max-width: 400px;
     width: 100%;
     justify-content: space-between;
@@ -164,19 +173,26 @@ a{
 }
 
 .interface-radio-text{
+    color: var(--secondary-text-color);
     transition: .3s color;
     cursor: pointer;
 }
 
 .interface-radio:checked + .interface-radio-text{
-    color: var(--secondary-text-color);
+    color: var(--main-text-color);
 }
 
-/* Language selector */
+/* Language selector and timer*/
+
+.timer{
+    font-size: 1em;
+    font-weight: 600;
+}
 
 .lang-button-container{
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .lang-button{
@@ -184,7 +200,6 @@ a{
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    max-width: 100px;
 }
 
 .lang-button-text{
@@ -211,12 +226,13 @@ a{
 }
 
 .input-window{
+    font-family: 'Jura', sans-serif;
     padding: 1em 2em;
     width: 100%;
     background-color: var(--element-bg-color);
     border: var(--border-color) 2px solid;
     border-radius: 50px;
-    font-size: 1.75em;
+    font-size: 1.5em;
     min-height: 240px;
     max-height: 240px;
     max-width: 80%;
@@ -224,6 +240,33 @@ a{
     color: var(--secondary-text-color);
     overflow: hidden;
     resize: none;
+}
+
+.verify{
+    position: relative;
+}
+
+.input-verify{
+    padding: .89em 2.075em;
+    text-align: start;
+    background: none;
+    border: none;
+    left: 120px;
+    bottom: -25px;
+    position: absolute;
+}
+
+.input-text{
+    font-weight: 600;
+    font-family: 'Jura', sans-serif;
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 1em;
+    background-color: var(--element-bg-color);
+    border-radius: 50px;
+    margin-top: 2em;
+    max-width: 250px;
+    width: 100%;
 }
 
 /* Replay */
@@ -246,7 +289,7 @@ a{
 }
 
 .replay-hotkey-container{
-    padding: 5em 0;
+    padding: 2em 0;
 }
 
 .hotkey-text{
@@ -273,7 +316,7 @@ a{
     z-index: 1;
 }
 
-.info-modal, .settings-modal, .language-modal{
+.info-modal, .settings-modal, .language-modal, .result-modal{
     border-radius: 50px;
     width: 50%;
     padding: 1em;
