@@ -74,28 +74,23 @@ diffHard.addEventListener("click", function(){
     generate()
 })
 
-// textArea.addEventListener("keydown", function(event){
-//     console.log(event.key)
-//     if(event.key == text[0]){
-//         textArea.html.append = "<span class='correct'>"+event.key+"</span>"
-//     }
-// })
-
 let inputText = document.getElementById("inputText")
 let inputVerify = document.getElementById("inputVerify")
 
 inputCount = -1
+correctInput = 0
+wrongInput = 0
 
 inputText.addEventListener("keydown", function(event){
     inputCount += 1
 
     if(event.key == text[inputCount]){
         inputVerify.innerHTML += "<span class='correct'>"+text[inputCount]+"</span>"
+        correctInput += 1
     }else{
         inputVerify.innerHTML += "<span class='wrong'>"+text[inputCount]+"</span>"
+        wrongInput += 1
     }
-
-    console.log(inputCount)
     
 })
 
@@ -113,23 +108,90 @@ let time15 = document.getElementById("time15"),
 timeVal = 15
 
 function timing(time){
+    graphCorrect = []
+    graphWrong = []
+    arrayNorm1 = 0
+    arrayNorm2 = 0
+    sum1 = 0
+    sum2 = 0
 
     lvt = setInterval(function(){timer.textContent = timeVal - 1
-        timeVal -= 1}, 1000)
+        timeVal -= 1
+        
+        if(graphCorrect.length==0){
+            graphCorrect.push(correctInput)
+        }else{
+            sum1 += graphCorrect[arrayNorm1]
+            graphCorrect.push(correctInput-sum1)
+            arrayNorm1 += 1
+        }
+
+        if(graphWrong.length==0){
+            graphWrong.push(wrongInput)
+        }else{
+            sum2 += graphWrong[arrayNorm2]
+            graphWrong.push(wrongInput-sum2)
+            arrayNorm2 += 1
+        }
+
+    }, 1000)
     
     setTimeout(function(){resultModal.classList.remove("hidden")
+        inputText.blur()
         clearInterval(lvt)
         generate()
         inputText.value = ""
         inputVerify.textContent = ""
         inputCount = -1
+        charCorrect.textContent = correctInput
+        charWrong.textContent = wrongInput
+
+        accVal = ((correctInput*100)/(correctInput+wrongInput)).toFixed(2)
+        acc.textContent = accVal
+        
         if(time15.checked){
             timer.textContent = 15
+            wpmVal = (correctInput/5)/0.25
+            rawVal = ((correctInput+wrongInput)/5)/0.25
+            xVal = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
         }else if(time30.checked){
             timer.textContent = 30
+            wpmVal = (correctInput/5)/0.5
+            rawVal = ((correctInput+wrongInput)/5)/0.5
+            xVal = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
         }else if(time60.checked){
             timer.textContent = 60
+            wpmVal = (correctInput/5)/1
+            rawVal = ((correctInput+wrongInput)/5)/1
+            xVal = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
         }
+
+        wpm.textContent = wpmVal
+        rawWpm.textContent = rawVal
+
+        var chart = new Chart("resultChart",{
+            type: "line",
+            data: {
+                labels: xVal,
+                datasets: [{
+                    data: graphCorrect,
+                    borderColor: "green",
+                    lineTension: 0.3
+                },{
+                    data: graphWrong,
+                    borderColor: "red",
+                    lineTension: 0.3
+                }]
+            },options: {
+                legend: {display: false}
+              }
+        })
+
+        correctInput = 0
+        wrongInput = 0
+        graphCorrect = []
+        graphWrong = []
+
         inputText.addEventListener("keydown", function(event){
     
             if(time15.checked){
@@ -176,3 +238,9 @@ time30.addEventListener("click", function(){
 time60.addEventListener("click", function(){
     timer.textContent = 60
 })
+
+let wpm = document.getElementById("wpm")
+let rawWpm = document.getElementById("rawWpm")
+let acc = document.getElementById("acc")
+let charCorrect = document.getElementById("charCorrect")
+let charWrong = document.getElementById("charWrong")

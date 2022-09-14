@@ -22,6 +22,22 @@
             </div>
 
             <h1 class="info-head">Info</h1>
+
+            <div class="info-text">
+                <h2>About</h2>
+                <p>KittyType is a web app to test typing speed and accuracy</p>
+                <h2>Time selection</h2>
+                <p>You have three options on the interface: 15sec, 30sec and 60sec. <br>
+                    You can choose any of them by clicking on the number.</p>
+                <h2>Difficulty selection</h2>
+                <p>You have three options on the interface: Easy, Medium and Hard. <br>
+                    Easy difficulty generates text without capital letters and punctuation. <br>
+                    Medium difficulty generates text with capital letters. <br>
+                    Hard difficulty generates text with capital letters and punctuation. <br>
+                    You can choose any difficulty clicking on difficulty name.</p>
+                <h2>Hotkey</h2>
+                <p>You can press F2 insted of the button under the text area to restart/generate new text.</p>
+            </div>
         </div>
     </div>
 
@@ -55,6 +71,14 @@
             </div>
 
             <h1 class="language-head">Results</h1>
+
+            <div class="result-info">
+                <canvas id="resultChart" class="result-canvas" style="width:100%;max-width:600px;margin: 0 auto;"></canvas>
+                <p>WPM : <span id="wpm">0</span></p>
+                <p>Raw WPM : <span id="rawWpm">0</span></p>
+                <p>Accuracy : <span id="acc">0</span>%</p>
+                <p>Characters (correct/wrong) : <span id="charCorrect">0</span> / <span id="charWrong">0</span></p>
+            </div>
         </div>
     </div>
 
@@ -142,7 +166,7 @@
         </div>
 
         <div class="replay-hotkey-container">
-            <h1 class="hotkey-text"><span class="hotkey-decoration">F2</span> - Restart</h1>
+            <h1 class="hotkey-text"><span class="hotkey-decoration">F2</span> - Restart / Generate new text</h1>
         </div>
     </main>
 
@@ -301,6 +325,7 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
     <script src="scripts.js"></script>
     <script src="textGen.js"></script>
     <script src="keyboard.js"></script>
