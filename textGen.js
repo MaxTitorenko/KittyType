@@ -1,6 +1,11 @@
-const commonWordsEasy = ["the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","i","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"];
-const commonWordsMedium = ["The", "the","of","And","and","A","a","to","in","is","You","you","that","It","it","He","he","was","for","on","Are","are","as","with","His","his","they","I","i","at","be","This","this","have","from","or","one","had","by","Word","word","but","not","What","what","All","all","were","We","we","when","Your","your","can","said","there","use","an","each","which","She","she","do","how","Their","their","if","will","up","Other","other","about","out","many","then","Them","them","These","these","so","Some","some","Her","her","would","make","like","Him","him","into","time","has","Look","look","two","more","write","go","See","see","number","no","Way","way","could","People","people","My","my","than","first","water","been","call","Who","who","oil","Its","its","now","find","long","down","day","Did","did","get","come","made","may","part"];
+const engWordsEasy = ["the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","i","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"];
+const engWordsMedium = ["The", "the","of","And","and","A","a","to","in","is","You","you","that","It","it","He","he","was","for","on","Are","are","as","with","His","his","they","I","i","at","be","This","this","have","from","or","one","had","by","Word","word","but","not","What","what","All","all","were","We","we","when","Your","your","can","said","there","use","an","each","which","She","she","do","how","Their","their","if","will","up","Other","other","about","out","many","then","Them","them","These","these","so","Some","some","Her","her","would","make","like","Him","him","into","time","has","Look","look","two","more","write","go","See","see","number","no","Way","way","could","People","people","My","my","than","first","water","been","call","Who","who","oil","Its","its","now","find","long","down","day","Did","did","get","come","made","may","part"];
+
+const uaWordsEasy = ['як', 'я', 'його', 'що', 'він', 'було', 'для', 'на', 'є', 'вони', 'бути', 'у', 'один', 'мати', 'це', 'від', 'по', 'гаряча', 'слово', 'але', 'що', 'деякі', 'вогонь', 'це', 'ви', 'або', 'було', 'план', 'і', 'до', 'кішка', 'в', 'ми', 'може', 'через', 'другий', 'були', 'які', 'зробити', 'їх', 'час', 'якщо', 'буде', 'вона', 'кожен', 'сказати', 'робити', 'набір', 'три', 'хотіти', 'повітря', 'добре', 'також', 'грати', 'кінець', 'ставити', 'додому', 'читати', 'рука', 'великий', 'навіть', 'земля', 'тут', 'високий', 'чому', 'чоловіки', 'пішов', 'світло', 'вид', 'від', 'потрібно', 'будинок', 'картина', 'нам', 'знову', 'тварин', 'крапка', 'поруч', 'будувати', 'будь', 'новий', 'робота', 'частина', 'приймати', 'отримувати', 'місце', 'зробив', 'жити', 'де', 'після', 'назад', 'трохи', 'тільки', 'круглий', 'людина', 'рік', 'мене', 'наш', 'під', 'дуже', 'просто', 'вирок', 'думаю', 'сказати']
+const uaWordsMedium = ['як','Як','Я', 'я', 'Його','його', 'Що','що', 'Він','він', 'було', 'для', 'на', 'Є','є', 'Вони','вони', 'бути', 'у', 'один', 'Мати','мати', 'Це','це', 'Від','від', 'по', 'гаряча', 'слово', 'Але','але', 'деякі', 'вогонь', 'Ви','ви', 'або', 'було', 'план', 'І','і', 'До','до', 'кішка', 'В','в', 'Ми','ми', 'може', 'через', 'другий', 'були', 'Які','які', 'зробити', 'Їх','їх', 'Час','час', 'Якщо','якщо', 'Буде','буде', 'Вона','вона', 'кожен', 'сказати', 'робити', 'набір', 'три', 'хотіти', 'повітря', 'добре', 'також', 'грати', 'кінець', 'ставити', 'додому', 'читати', 'Рука','рука', 'Великий','великий', 'навіть', 'Земля','земля', 'Тут','тут', 'високий', 'Чому','чому', 'чоловіки', 'пішов', 'світло', 'Вид','вид', 'Від','від', 'потрібно', 'будинок', 'картина', 'Нам','нам', 'знову', 'Тварини','тварини', 'крапка', 'поруч', 'будувати', 'Будь','будь', 'Новий','новий', 'робота', 'частина', 'приймати', 'отримувати', 'Місце','місце', 'зробив', 'Жити','жити', 'Де','де', 'після', 'назад', 'трохи', 'тільки', 'круглий', 'Людина','людина', 'Рік','рік', 'Мене','мене', 'Наш','наш', 'під', 'дуже', 'просто', 'вирок', 'думаю', 'сказати']
+
 const punctuation = [",",".",";",":","?","!"]
+
 
 let textArea = document.getElementById("textArea"),
     replayButton = document.getElementById("replayButton")
@@ -8,6 +13,9 @@ let textArea = document.getElementById("textArea"),
 let diffEasy = document.getElementById("diffEasy"),
     diffMedium = document.getElementById("diffMedium"),
     diffHard = document.getElementById("diffHard")
+
+let langEng = document.getElementById("langEng"),
+    langUA = document.getElementById("langUA")
 
 function textGen(array){
     text = ""
@@ -41,11 +49,23 @@ function textGenHard(array){
 
 function generate(){
     if(diffEasy.checked){
-        textGen(commonWordsEasy)
+        if(langEng.checked){
+            textGen(engWordsEasy)
+        }else if(langUA.checked){
+            textGen(uaWordsEasy)
+        }
     }else if(diffMedium.checked){
-        textGen(commonWordsMedium)
+        if(langEng.checked){
+            textGen(engWordsMedium)
+        }else if(langUA.checked){
+            textGen(uaWordsMedium)
+        }
     }else if(diffHard.checked){
-        textGenHard(commonWordsMedium)
+        if(langEng.checked){
+            textGenHard(engWordsMedium)
+        }else if(langUA.checked){
+            textGenHard(uaWordsMedium)
+        }
     }
 }
 
@@ -83,15 +103,19 @@ wrongInput = 0
 
 inputText.addEventListener("keydown", function(event){
     inputCount += 1
+    
 
-    if(event.key == text[inputCount]){
-        inputVerify.innerHTML += "<span class='correct'>"+text[inputCount]+"</span>"
+    if(event.key == "Shift"){ inputCount -= 1 }
+    else if(event.key == text[inputCount]){
+        inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
         correctInput += 1
     }else{
-        inputVerify.innerHTML += "<span class='wrong'>"+text[inputCount]+"</span>"
+        inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
         wrongInput += 1
     }
-    
+    if(inputCount>0){
+        inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("writing-line")
+    }
 })
 
 // Timer
@@ -176,15 +200,19 @@ function timing(time){
                 datasets: [{
                     data: graphCorrect,
                     borderColor: "green",
-                    lineTension: 0.3
+                    lineTension: 0.3,
+                    label: "correct"
                 },{
                     data: graphWrong,
                     borderColor: "red",
-                    lineTension: 0.3
+                    lineTension: 0.3,
+                    label: "wrong"
                 }]
-            },options: {
-                legend: {display: false}
-              }
+            }
+        })
+
+        closeResult.addEventListener("click", function(){
+            chart.destroy()
         })
 
         correctInput = 0
@@ -244,3 +272,14 @@ let rawWpm = document.getElementById("rawWpm")
 let acc = document.getElementById("acc")
 let charCorrect = document.getElementById("charCorrect")
 let charWrong = document.getElementById("charWrong")
+let langText = document.getElementById("langText")
+
+langEng.addEventListener("click", function(){
+    generate()
+    langText.textContent = "Eng"
+})
+
+langUA.addEventListener("click", function(){
+    generate()
+    langText.textContent = "UA"
+})

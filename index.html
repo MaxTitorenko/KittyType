@@ -49,6 +49,13 @@
             </div>
 
             <h1 class="settings-head">Settings</h1>
+
+            <div class="settings-theme">
+                <h2>Theme</h2>
+                <a href="" id="themeStandard" class="theme-button">Standard</a>
+                <a href="" id="themeDark" class="theme-button">Dark</a>
+                <a href="" id="themeLight" class="theme-button">Light</a>
+            </div>
         </div>
     </div>
 
@@ -60,6 +67,18 @@
             </div>
 
             <h1 class="language-head">Language</h1>
+
+            <form class="language-select">
+                <h3>Remember to change your keyborad layout according to the language you are choosing</h2>
+                <div>
+                    <input type="radio" id="langEng" name="lang" checked>
+                    <label for="langEng">English</label>
+                </div>
+                <div>  
+                    <input type="radio" id="langUA" name="lang">
+                    <label for="langUA">Ukrainian/Українська</label>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -73,7 +92,7 @@
             <h1 class="language-head">Results</h1>
 
             <div class="result-info">
-                <canvas id="resultChart" class="result-canvas" style="width:100%;max-width:600px;margin: 0 auto;"></canvas>
+                <canvas id="resultChart" class="result-canvas" style="width:65%;margin: 0 auto;"></canvas>
                 <p>WPM : <span id="wpm">0</span></p>
                 <p>Raw WPM : <span id="rawWpm">0</span></p>
                 <p>Accuracy : <span id="acc">0</span>%</p>
@@ -148,7 +167,7 @@
 
                 <div class="lang-button" id="languageButton">
                     <img src="svg/earth.svg" class="svg lang-svg">
-                    <h1 class="lang-button-text">Eng</h1>
+                    <h1 class="lang-button-text" id="langText">Eng</h1>
                 </div>
             </div>
 
@@ -329,5 +348,6 @@
     <script src="scripts.js"></script>
     <script src="textGen.js"></script>
     <script src="keyboard.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>

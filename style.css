@@ -12,6 +12,7 @@ font-family: 'Jura', sans-serif;
     --main-text-color: #fff;
     --secondary-text-color: #AEAEAE;
     --border-color: #BBBBBB;
+    --svg-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(2deg) brightness(102%) contrast(104%);
     --trigger-color: rgb(255, 72, 72);
 }
 
@@ -33,7 +34,7 @@ a{
 }
 
 .svg{
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(2deg) brightness(102%) contrast(104%);
+    filter: var(--svg-filter);
 }
 
 /* Utility */
@@ -180,6 +181,7 @@ a{
 
 .interface-radio:checked + .interface-radio-text{
     color: var(--main-text-color);
+    text-decoration-line: underline;
 }
 
 /* Language selector and timer*/
@@ -219,6 +221,14 @@ a{
     height: 30px;
 }
 
+.language-select{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    margin: .5em auto;
+    align-items: center;
+}
+
 /* Input */
 
 .input-container{
@@ -228,14 +238,14 @@ a{
 .input-window{
     font-family: 'Jura', sans-serif;
     padding: 1em 2em;
-    width: 100%;
     background-color: var(--element-bg-color);
     border: var(--border-color) 2px solid;
     border-radius: 50px;
     font-size: 1.5em;
     min-height: 240px;
     max-height: 240px;
-    max-width: 80%;
+    min-width: 960px;
+    max-width: 960px;
     outline: none;
     color: var(--secondary-text-color);
     overflow: hidden;
@@ -279,7 +289,6 @@ a{
 .replay-svg{
     width: 40px;
     height: 40px;
-    transform: rotateX(360deg);
     animation: replayAnim 1s alternate infinite;
     animation-play-state: paused;
 }
@@ -317,11 +326,16 @@ a{
 }
 
 .info-modal, .settings-modal, .language-modal, .result-modal{
+    position: absolute;
     border-radius: 50px;
     width: 50%;
     padding: 1em;
-    transform: translate(50%, 10%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background-color: var(--bg-color);
+    max-height: 90vh;
+    overflow-y: scroll;
 }
 
 .info-head, .settings-head, .language-head{
@@ -434,6 +448,36 @@ a{
     padding: 1em;
 }
 
+/* Settings modal */
+
+.settings-theme{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+.theme-button{
+    text-align: center;
+    background-color: var(--element-bg-color);
+    border: var(--border-color) 1px solid;
+    border-radius: 50px;
+    padding: .5em 1em;
+    margin: .5em auto;
+    max-width: 400px;
+    transition: .3s background-color;
+}
+
+.theme-button:hover, .theme-button:focus{
+    background-color: var(--bg-color);
+}
+
+/* Writing line */
+
+.writing-line{
+    border-right: var(--border-color) 1px solid;
+    animation: beam 1s linear infinite;
+}
+
 /* Animations */
 
 @keyframes gearRotate{
@@ -452,3 +496,111 @@ a{
 @keyframes keyPress{
     to {background-color: var(--trigger-color);}
 }
+
+@keyframes beam{
+    to {border-color: var(--bg-color);}
+}
+
+/* Media */
+
+@media(max-width: 1350px){
+    .info-modal, .settings-modal, .language-modal, .result-modal{
+        width: 80%;
+    }
+}
+
+@media(max-width: 1215px){
+    body{
+        overflow-y: scroll;
+    }
+
+    .input-window{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .input-verify{
+        left: 0;
+    }
+}
+
+@media(max-width: 900px){
+    #keyboardButton{
+        display: none;
+    }
+
+    .lang-button-container{
+        width: 90%;
+    }
+
+    .input-window{
+        min-height: 300px;
+        max-height: 300px;
+    }
+}
+
+@media(max-width: 830px){
+    .info-modal, .settings-modal, .language-modal, .result-modal{
+        width: 95%;
+    }
+}
+
+@media(max-width: 720px){
+    .input-window{
+        min-height: 350px;
+        max-height: 350px;
+    }
+}
+
+@media(max-width: 610px){
+    .input-window{
+        min-height: 380px;
+        max-height: 380px;
+    }
+}
+
+@media(max-width: 573px){
+    .input-window{
+        min-height: 400px;
+        max-height: 400px;
+    }
+}
+
+@media(max-width: 545px){
+    .input-window{
+        min-height: 480px;
+        max-height: 480px;
+    }
+}
+
+@media(max-width: 475px){
+    .input-window{
+        min-height: 540px;
+        max-height: 540px;
+    }
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-radius: 2em;
+    margin: 5em 0;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 2em;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
