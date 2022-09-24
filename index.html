@@ -14,6 +14,12 @@
 
 <body class="preload">
 
+    <div class="not-supported hidden" id="notSupported">
+        <img src="https://cdn.7tv.app/emote/62bca5936420068ac736a036/4x.gif" alt="" class="not-supported-img">
+        <h1>Your device is not supported</h1>
+        <p>(screen size of your device is not optimal for having a good experience with the web app)</p>
+    </div>
+
     <div class="modal hidden" id="infoModal">
         <div class="info-modal">
             <div class="modal-close" id="closeInfo">
@@ -52,10 +58,26 @@
 
             <div class="settings-theme">
                 <h2>Theme</h2>
-                <a href="" id="themeStandard" class="theme-button">Standard</a>
-                <a href="" id="themeDark" class="theme-button">Dark</a>
-                <a href="" id="themeLight" class="theme-button">Light</a>
+                <div class="theme-buttons">
+                    <a href="" id="themeStandard" class="theme-button">Standard</a>
+                    <a href="" id="themeDark" class="theme-button">Dark</a>
+                    <a href="" id="themeLight" class="theme-button">Light</a>
+                    <a href="" id="themeLaguna" class="theme-button">Laguna</a>
+                    <a href="" id="themeSwamp" class="theme-button">Swamp</a>
+                </div>
             </div>
+
+            <form class="verifier">
+                <h2>Verifier</h2>
+                <div>  
+                    <input type="radio" id="verifier1" name="verifier" checked>
+                    <label for="verifier1">Verifier V1</label>
+                </div>
+                <div>
+                    <input type="radio" id="verifier2" name="verifier">
+                    <label for="verifier2">Verifier V2</label>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -77,6 +99,11 @@
                 <div>  
                     <input type="radio" id="langUA" name="lang">
                     <label for="langUA">Ukrainian/Українська</label>
+                </div>
+
+                <div>  
+                    <input type="radio" id="langGer" name="lang">
+                    <label for="langGer">German/Deutsch</label>
                 </div>
             </form>
         </div>
@@ -104,7 +131,7 @@
     <header>
         <div class="container header">
             <a href="#">
-            <div class="logo">
+            <div class="logo" id="logo">
                 <img src="svg/paw.svg" class="svg logo-paw">
                 <div class="logo-text">
                     <h1 class="logo-bottom">KittyType</h1>
@@ -175,6 +202,9 @@
                 <textarea class="input-window" id="textArea"></textarea>
                 <div class="verify">
                     <p class="input-window input-verify" id="inputVerify"></p>
+                    <div class="input-window input-activate" id="inputActivate">
+                        <h1 class="input-activate-text">Click here to start typing</h1>
+                    </div>
                 </div>
                 <input type="text" id="inputText" class="input-text" placeholder="Click here to start typing">
             </div>

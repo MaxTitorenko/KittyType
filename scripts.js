@@ -46,3 +46,24 @@ keyboardButton.addEventListener("click", function(event){
     event.preventDefault()
     keyboard.classList.toggle("hidden")
 })
+
+let notSupported = document.getElementById("notSupported")
+let logo = document.getElementById("logo")
+
+window.addEventListener("resize", function(){
+    if(window.screen.width < 500){
+        notSupported.classList.remove("hidden")
+        logo.classList.add("hidden")
+    }else{
+        notSupported.classList.add("hidden")
+        logo.classList.remove("hidden")
+    }
+})
+
+if(window.screen.width < 500){
+    notSupported.classList.remove("hidden")
+    logo.classList.add("hidden")
+}else{
+    notSupported.classList.add("hidden")
+    logo.classList.remove("hidden")
+}

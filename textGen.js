@@ -4,6 +4,9 @@ const engWordsMedium = ["The", "the","of","And","and","A","a","to","in","is","Yo
 const uaWordsEasy = ['як', 'я', 'його', 'що', 'він', 'було', 'для', 'на', 'є', 'вони', 'бути', 'у', 'один', 'мати', 'це', 'від', 'по', 'гаряча', 'слово', 'але', 'що', 'деякі', 'вогонь', 'це', 'ви', 'або', 'було', 'план', 'і', 'до', 'кішка', 'в', 'ми', 'може', 'через', 'другий', 'були', 'які', 'зробити', 'їх', 'час', 'якщо', 'буде', 'вона', 'кожен', 'сказати', 'робити', 'набір', 'три', 'хотіти', 'повітря', 'добре', 'також', 'грати', 'кінець', 'ставити', 'додому', 'читати', 'рука', 'великий', 'навіть', 'земля', 'тут', 'високий', 'чому', 'чоловіки', 'пішов', 'світло', 'вид', 'від', 'потрібно', 'будинок', 'картина', 'нам', 'знову', 'тварин', 'крапка', 'поруч', 'будувати', 'будь', 'новий', 'робота', 'частина', 'приймати', 'отримувати', 'місце', 'зробив', 'жити', 'де', 'після', 'назад', 'трохи', 'тільки', 'круглий', 'людина', 'рік', 'мене', 'наш', 'під', 'дуже', 'просто', 'вирок', 'думаю', 'сказати']
 const uaWordsMedium = ['як','Як','Я', 'я', 'Його','його', 'Що','що', 'Він','він', 'було', 'для', 'на', 'Є','є', 'Вони','вони', 'бути', 'у', 'один', 'Мати','мати', 'Це','це', 'Від','від', 'по', 'гаряча', 'слово', 'Але','але', 'деякі', 'вогонь', 'Ви','ви', 'або', 'було', 'план', 'І','і', 'До','до', 'кішка', 'В','в', 'Ми','ми', 'може', 'через', 'другий', 'були', 'Які','які', 'зробити', 'Їх','їх', 'Час','час', 'Якщо','якщо', 'Буде','буде', 'Вона','вона', 'кожен', 'сказати', 'робити', 'набір', 'три', 'хотіти', 'повітря', 'добре', 'також', 'грати', 'кінець', 'ставити', 'додому', 'читати', 'Рука','рука', 'Великий','великий', 'навіть', 'Земля','земля', 'Тут','тут', 'високий', 'Чому','чому', 'чоловіки', 'пішов', 'світло', 'Вид','вид', 'Від','від', 'потрібно', 'будинок', 'картина', 'Нам','нам', 'знову', 'Тварини','тварини', 'крапка', 'поруч', 'будувати', 'Будь','будь', 'Новий','новий', 'робота', 'частина', 'приймати', 'отримувати', 'Місце','місце', 'зробив', 'Жити','жити', 'Де','де', 'після', 'назад', 'трохи', 'тільки', 'круглий', 'Людина','людина', 'Рік','рік', 'Мене','мене', 'Наш','наш', 'під', 'дуже', 'просто', 'вирок', 'думаю', 'сказати']
 
+const gerWordsEasy = ["der", "und", "sein", "in", "ein", "zu", "haben", "ich", "werden","sie", "von", "nicht", "mit", "es", "sich", "auch", "auf", "für", "an", "er", "so", "dass", "können", "dies", "als", "ihr", "ja", "wie", "bei", "oder", "wir", "aber", "dann", "amn", "da", "sein", "noch", "nach", "was", "also", "aus", "all", "wenn", "nur", "müssen", "sagen", "um", "über", "machen", "kein", "jahr", "du", "mein", "schon", "vor", "durch", "geben", "mehr", "andere", "viel", "kommen", "jetzt", "sollen", "mir", "wollen", "ganz", "mich", "immer", "gehen", "sehr", "hier", "doch", "bis", "groß", "wieder", "mal", "zwei", "gut", "wissen", "neu", "sehen", "lassen", "uns", "weil", "unter", "denn", "stehen", "jede", "beispiel", "zeit", "erste", "ihm", "ihn", "wo", "lang", "eigentlich", "damit", "selbst", "unser", "oben"]
+const gerWordsMedium = ["der", "Der", "und", "Und","sein", "in", "ein", "Ein","zu", "haben", "Haben","ich", "Ich","werden", "sie", "Sie","von", "Von","nicht", "Nicht","mit", "es", "Es","sich", "auch", "Auch","auf", "Auf","für", "Für","an", "er", "so", "das", "Das", "können", "Können","dies", "als", "ihr", "ja", "Ja","wie", "Wie","bei", "oder", "Oder","wir", "aber", "dann", "Dann","amn", "da", "sein", "noch", "Noch","nach", "was", "Was", "also", "aus", "all", "wenn", "Wenn","nur", "müssen", "Müssen","sagen", "um", "über", "machen", "Machen", "kein", "jahr", "Jahr","du", "mein", "schon", "Schon", "vor", "durch", "Durch","geben", "mehr", "andere", "viel", "Viel","kommen", "jetzt", "Jetzt","sollen", "mir", "wollen", "ganz", "mich", "immer", "gehen", "Gehen","sehr", "hier", "doch", "bis", "groß", "wieder", "mal", "zwei", "Zwei","gut", "Gut","wissen", "neu", "sehen", "lassen", "Lassen","uns", "weil", "unter", "denn", "stehen", "jede", "beispiel", "Beispiel","zeit", "erste", "ihm", "ihn", "wo", "lang", "eigentlich", "damit", "Damit","selbst", "unser", "Unser","oben"]
+
 const punctuation = [",",".",";",":","?","!"]
 
 
@@ -15,7 +18,8 @@ let diffEasy = document.getElementById("diffEasy"),
     diffHard = document.getElementById("diffHard")
 
 let langEng = document.getElementById("langEng"),
-    langUA = document.getElementById("langUA")
+    langUA = document.getElementById("langUA"),
+    langGer = document.getElementById("langGer")
 
 function textGen(array){
     text = ""
@@ -53,18 +57,24 @@ function generate(){
             textGen(engWordsEasy)
         }else if(langUA.checked){
             textGen(uaWordsEasy)
+        }else if(langGer.checked){
+            textGen(gerWordsEasy)
         }
     }else if(diffMedium.checked){
         if(langEng.checked){
             textGen(engWordsMedium)
         }else if(langUA.checked){
             textGen(uaWordsMedium)
+        }else if(langGer.checked){
+            textGen(gerWordsMedium)
         }
     }else if(diffHard.checked){
         if(langEng.checked){
             textGenHard(engWordsMedium)
         }else if(langUA.checked){
             textGenHard(uaWordsMedium)
+        }else if(langGer.checked){
+            textGenHard(gerWordsMedium)
         }
     }
 }
@@ -96,6 +106,8 @@ diffHard.addEventListener("click", function(){
 
 let inputText = document.getElementById("inputText")
 let inputVerify = document.getElementById("inputVerify")
+let verifier1 = document.getElementById("verifier1")
+let verifier2 = document.getElementById("verifier2")
 
 inputCount = -1
 correctInput = 0
@@ -104,18 +116,58 @@ wrongInput = 0
 inputText.addEventListener("keydown", function(event){
     inputCount += 1
     
+    if(verifier1.checked){
+        if(event.key == "Shift"){ inputCount -= 1}
+        else if(event.key == text[inputCount]){
+            if(event.key == " "){
+                inputVerify.innerHTML += "<span class='correct writing-line invisible'>"+"!"+"</span>"
+            }else{
+                inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
+            }
+            correctInput += 1
+        }else{
+         inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
+            wrongInput += 1
+        }
 
-    if(event.key == "Shift"){ inputCount -= 1 }
-    else if(event.key == text[inputCount]){
-        inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
-        correctInput += 1
-    }else{
-        inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
-        wrongInput += 1
-    }
-    if(inputCount>0){
+        if(inputCount>0){
+            inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("writing-line")
+            if(text[inputCount-1] == " "){
+                inputVerify.getElementsByTagName("span")[inputCount-1].textContent = " "
+                inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("invisible")
+            }
+        }
+
+        
+    }else if(verifier2.checked){
+        if(event.key == "Shift"){ inputCount -= 1 }
+        else if(event.key == text[inputCount]){
+            if(event.key == " "){
+                inputVerify.innerHTML += "<span class='correct writing-line invisible'>"+"!"+"</span>"
+            }else{
+                inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
+            }
+            correctInput += 1
+        }else{
+         inputVerify.innerHTML += "<span class='wrong writing-line'>"+event.key+"</span>"
+            wrongInput += 1
+        }
+
+        if(inputCount>0){
         inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("writing-line")
+            if(inputVerify.getElementsByTagName("span")[inputCount-1].classList.contains("wrong")){
+                inputVerify.getElementsByTagName("span")[inputCount-1].textContent = text[inputCount-1]
+            }
+
+            if(text[inputCount-1] == " "){
+                inputVerify.getElementsByTagName("span")[inputCount-1].textContent = " "
+                inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("invisible")
+            }
+        }
+
     }
+
+    
 })
 
 // Timer
@@ -273,6 +325,7 @@ let acc = document.getElementById("acc")
 let charCorrect = document.getElementById("charCorrect")
 let charWrong = document.getElementById("charWrong")
 let langText = document.getElementById("langText")
+let inputActivate = document.getElementById("inputActivate")
 
 langEng.addEventListener("click", function(){
     generate()
@@ -282,4 +335,19 @@ langEng.addEventListener("click", function(){
 langUA.addEventListener("click", function(){
     generate()
     langText.textContent = "UA"
+})
+
+langGer.addEventListener("click", function(){
+    generate()
+    langText.textContent = "Ger"
+})
+
+inputActivate.addEventListener("click", function(){
+    inputActivate.style = "display: none"
+    console.log(inputActivate.classList)
+    inputText.focus()
+})
+
+inputText.addEventListener("focusout", function(){
+    inputActivate.style = "display: flex"
 })
