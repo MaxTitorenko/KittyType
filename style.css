@@ -75,6 +75,16 @@ a{
     width: 90%;
 }
 
+.cover{
+    position: absolute;
+    content: " ";
+    background: #ffffff00;
+    width: 100%;
+    height: 80px;
+    top: 130px;
+    left: 0;
+}
+
 /* Logo */
 
 .logo{
@@ -516,7 +526,8 @@ a{
 .theme-buttons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-self: center;
 }
 
 .theme-button{
@@ -524,7 +535,7 @@ a{
     border: var(--border-color) 1px solid;
     border-radius: 50px;
     padding: .5em 1em;
-    margin: .5em auto;
+    margin: .5em;
     max-width: 400px;
     transition: .3s background-color;
 }

@@ -11,7 +11,9 @@ const punctuation = [",",".",";",":","?","!"]
 
 
 let textArea = document.getElementById("textArea"),
-    replayButton = document.getElementById("replayButton")
+    replayButton = document.getElementById("replayButton"),
+    cover = document.getElementById("cover")
+
 
 let diffEasy = document.getElementById("diffEasy"),
     diffMedium = document.getElementById("diffMedium"),
@@ -24,10 +26,11 @@ let langEng = document.getElementById("langEng"),
 function textGen(array){
     text = ""
 
-    for(let i = 0; i <=100; i++){
+    for(let i = 0; i <=80; i++){
         rng = Math.floor(Math.random() * array.length)
         text += array[rng] + " "
     }
+    text = text.slice(0, -1)
 
     textArea.textContent = text
     textArea.value = text
@@ -36,7 +39,7 @@ function textGen(array){
 function textGenHard(array){
     text = ""
 
-    for(let i = 0; i <=100; i++){
+    for(let i = 0; i <=70; i++){
         rng = Math.floor(Math.random() * array.length)
         rng2 = Math.floor(Math.random() * punctuation.length)
         if(Math.floor(Math.random()*10)>=7){
@@ -46,6 +49,7 @@ function textGenHard(array){
             text += array[rng] + " "
         }
     }
+    text = text.slice(0, -1)
 
     textArea.textContent = text
     textArea.value = text
@@ -81,14 +85,41 @@ function generate(){
 
 generate()
 
+function resetLogic(){
+        clearTimeout(to)
+        generate()
+        clearInterval(lvt)
+        inputText.value = ""
+        inputVerify.textContent = ""
+        inputCount = -1
+        correctInput = 0
+        wrongInput = 0
+        graphCorrect = []
+        graphWrong = []
+
+        if(time15.checked){
+            timing(15000)
+            timeVal = 15
+            timer.textContent = 15
+        }else if(time30.checked){
+            timing(30000)
+            timeVal = 30
+            timer.textContent = 30
+        }else if(time60.checked){
+            timing(60000)
+            timeVal = 60
+            timer.textContent = 60
+        }
+}
+
 replayButton.addEventListener("click", function(event){
     event.preventDefault()
-    generate()
+    resetLogic()
 })
 
-document.addEventListener('keyup', function(event){
+document.addEventListener('keydown', function(event){
     if (event.key === "F2"){
-        generate()
+        resetLogic()
     }
 })
 
@@ -167,7 +198,15 @@ inputText.addEventListener("keydown", function(event){
 
     }
 
-    
+    inputText.addEventListener("keyup", function(){
+        if(text.length == inputText.value.length){
+            generate()
+            inputCount = -1
+            inputText.value = ""
+            inputVerify.textContent = ""
+        }
+    })
+        
 })
 
 // Timer
@@ -190,6 +229,7 @@ function timing(time){
     arrayNorm2 = 0
     sum1 = 0
     sum2 = 0
+    cover.classList.remove("hidden")
 
     lvt = setInterval(function(){timer.textContent = timeVal - 1
         timeVal -= 1
@@ -212,8 +252,9 @@ function timing(time){
 
     }, 1000)
     
-    setTimeout(function(){resultModal.classList.remove("hidden")
+    to = setTimeout(function(){resultModal.classList.remove("hidden")
         inputText.blur()
+        cover.classList.add("hidden")
         clearInterval(lvt)
         generate()
         inputText.value = ""
