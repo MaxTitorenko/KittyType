@@ -7,6 +7,12 @@ const uaWordsMedium = ['як','Як','Я', 'я', 'Його','його', 'Що','
 const gerWordsEasy = ["der", "und", "sein", "in", "ein", "zu", "haben", "ich", "werden","sie", "von", "nicht", "mit", "es", "sich", "auch", "auf", "für", "an", "er", "so", "dass", "können", "dies", "als", "ihr", "ja", "wie", "bei", "oder", "wir", "aber", "dann", "amn", "da", "sein", "noch", "nach", "was", "also", "aus", "all", "wenn", "nur", "müssen", "sagen", "um", "über", "machen", "kein", "jahr", "du", "mein", "schon", "vor", "durch", "geben", "mehr", "andere", "viel", "kommen", "jetzt", "sollen", "mir", "wollen", "ganz", "mich", "immer", "gehen", "sehr", "hier", "doch", "bis", "groß", "wieder", "mal", "zwei", "gut", "wissen", "neu", "sehen", "lassen", "uns", "weil", "unter", "denn", "stehen", "jede", "beispiel", "zeit", "erste", "ihm", "ihn", "wo", "lang", "eigentlich", "damit", "selbst", "unser", "oben"]
 const gerWordsMedium = ["der", "Der", "und", "Und","sein", "in", "ein", "Ein","zu", "haben", "Haben","ich", "Ich","werden", "sie", "Sie","von", "Von","nicht", "Nicht","mit", "es", "Es","sich", "auch", "Auch","auf", "Auf","für", "Für","an", "er", "so", "das", "Das", "können", "Können","dies", "als", "ihr", "ja", "Ja","wie", "Wie","bei", "oder", "Oder","wir", "aber", "dann", "Dann","amn", "da", "sein", "noch", "Noch","nach", "was", "Was", "also", "aus", "all", "wenn", "Wenn","nur", "müssen", "Müssen","sagen", "um", "über", "machen", "Machen", "kein", "jahr", "Jahr","du", "mein", "schon", "Schon", "vor", "durch", "Durch","geben", "mehr", "andere", "viel", "Viel","kommen", "jetzt", "Jetzt","sollen", "mir", "wollen", "ganz", "mich", "immer", "gehen", "Gehen","sehr", "hier", "doch", "bis", "groß", "wieder", "mal", "zwei", "Zwei","gut", "Gut","wissen", "neu", "sehen", "lassen", "Lassen","uns", "weil", "unter", "denn", "stehen", "jede", "beispiel", "Beispiel","zeit", "erste", "ihm", "ihn", "wo", "lang", "eigentlich", "damit", "Damit","selbst", "unser", "Unser","oben"]
 
+const spaWordsEasy = ["que", "de", "no", "a", "la", "el", "es", "y", "en", "lo", "un", "por", "qué", "me", "una", "te", "los", "se", "con", "para", "mi", "está", "si", "bien", "pero", "yo", "eso", "las", "sí", "su", "tu", "aquí", "del", "al", "como", "le", "más", "esto", "ya", "todo", "esta", "vamos", "muy", "hay", "ahora", "algo", "estoy", "tengo", "nos", "tú", "nada", "cuando", "ha", "este", "sé", "estás", "así", "puedo", "cómo", "quiero", "sólo", "soy", "tiene", "gracias", "o", "él", "bueno", "fue", "ser", "hacer", "son", "todos", "era", "eres", "vez", "tienes", "creo", "ella", "he", "ese", "voy", "puede", "sabes", "hola", "sus", "porque", "quién", "nunca", "dios", "dónde", "quieres", "casa", "favor", "esa", "dos", "tan", "señor", "tiempo", "verdad", "estaba"]
+const spaWordsMedium = ["que", "Que", "de", "De", "no", "No","a", "A","la", "El","el", "Es","es", "y", "en", "lo", "un", "Por","por", "Qué","qué", "Me","me", "Una","una", "Te","te", "Los","los", "Se","se", "con", "Para","para", "mi", "Está","está", "Si","si", "Bien","bien", "Pero","pero", "Yo","yo", "Eso","eso", "Las","las", "Sí","sí", "su", "Tu","tu", "Aquí","aquí", "Del","del", "al", "Como","como", "le", "Más","más", "esto", "ya", "Todo","todo", "esta", "Vamos","vamos", "Muy","muy", "hay", "ahora", "algo", "Estoy","estoy", "Tengo","tengo", "nos", "tú", "Nada","nada", "cuando", "ha", "este", "sé", "Estás","estás", "así", "puedo", "Cómo","cómo", "quiero", "Sólo","sólo", "soy", "tiene", "Gracias","gracias", "o", "él", "Bueno","bueno", "fue", "ser", "Hacer","hacer", "son", "todos", "era", "eres", "vez", "Tienes","tienes", "Creo","creo", "ella", "he", "ese", "voy", "Puede","puede", "sabes", "Hola","hola", "sus", "Porque","porque", "quién", "Nunca","nunca", "dios", "dónde", "Quieres","quieres", "casa", "favor", "esa", "dos", "tan", "Señor","señor", "tiempo", "Verdad","verdad", "estaba"]
+
+const porWordsEasy = ["pra", "também", "vocês", "quê", "algo", "obrigado", "dia", "esse", "lhe", "este", "ir", "deus", "essa", "oh", "melhor", "ainda", "temos", "cara", "sem", "pai", "sempre", "vida", "vez", "homem", "estamos", "talvez", "mãe", "anos", "alguém", "depois", "verdade", "claro", "boa", "nem", "pouco", "ficar", "coisas", "aí", "tinha", "dois", "falar", "deve", "antes", "pelo", "faz", "parece", "todo", "dele", "pessoas", "fora", "lugar", "apenas", "ei", "fazendo", "ninguém", "dinheiro", "acha", "vá", "comigo", "mundo", "preciso", "qual", "grande", "estar", "alguma", "hoje", "trabalho", "suas", "dar", "seja", "disso", "fez", "nome", "será", "novo", "filho", "outro", "qualquer", "quanto", "saber", "vão", "meus", "queria", "ok", "podemos", "nossa", "poderia", "outra", "olá", "precisa", "venha", "nosso", "mulher", "sinto", "desculpe", "toda", "diga", "hora", "daqui", "amor"]
+const porWordsMedium = ["pra", "Também","também", "vocês","Vocês", "Quê","quê", "algo","Algo", "obrigado","Obrigado","dia", "Esse","esse", "lhe", "este", "ir", "deus","Deus", "essa", "oh", "melhor","Melhor", "ainda", "temos","Temos", "cara","Cara", "sem", "pai", "sempre", "Sempre","vida", "vez", "homem","Homem", "estamos", "Talvez","talvez", "mãe", "anos", "Slguém","alguém", "depois", "Verdade","verdade", "claro", "boa", "nem", "Pouco","pouco", "ficar","Ficar", "coisas","Coisas", "aí", "tinha","Tinha", "dois", "falar", "deve", "antes", "Antes","pelo", "faz", "parece", "todo", "dele","Dele", "pessoas", "fora", "lugar","Lugar", "apenas", "ei", "fazendo","Fazendo", "ninguém", "dinheiro","Dinheiro", "acha", "vá", "comigo", "mundo", "preciso", "Preciso","qual", "grande", "estar", "alguma","Alguma", "hoje", "trabalho","Trabalho", "suas", "dar", "seja","Seja", "disso", "fez", "nome", "Será","será", "novo", "filho","Filho", "outro", "qualquer","Qualquer", "quanto", "saber", "vão","Vão", "meus", "queria", "ok", "podemos","Podemos", "nossa", "poderia", "outra", "olá","Olá", "precisa", "venha", "nosso","Nosso", "mulher", "sinto", "desculpe","Desculpe", "toda", "diga","Diga", "hora", "daqui","Daqui", "amor"]
+
 const punctuation = [",",".",";",":","?","!"]
 
 
@@ -21,7 +27,9 @@ let diffEasy = document.getElementById("diffEasy"),
 
 let langEng = document.getElementById("langEng"),
     langUA = document.getElementById("langUA"),
-    langGer = document.getElementById("langGer")
+    langGer = document.getElementById("langGer"),
+    langEs = document.getElementById("langEs"),
+    langPor = document.getElementById("langPor")
 
 function textGen(array){
     text = ""
@@ -63,6 +71,10 @@ function generate(){
             textGen(uaWordsEasy)
         }else if(langGer.checked){
             textGen(gerWordsEasy)
+        }else if(langEs.checked){
+            textGen(spaWordsEasy)
+        }else if(langPor.checked){
+            textGen(porWordsEasy)
         }
     }else if(diffMedium.checked){
         if(langEng.checked){
@@ -71,6 +83,10 @@ function generate(){
             textGen(uaWordsMedium)
         }else if(langGer.checked){
             textGen(gerWordsMedium)
+        }else if(langEs.checked){
+            textGen(spaWordsMedium)
+        }else if(langPor.checked){
+            textGen(porWordsMedium)
         }
     }else if(diffHard.checked){
         if(langEng.checked){
@@ -79,6 +95,10 @@ function generate(){
             textGenHard(uaWordsMedium)
         }else if(langGer.checked){
             textGenHard(gerWordsMedium)
+        }else if(langEs.checked){
+            textGenHard(spaWordsMedium)
+        }else if(langPor.checked){
+            textGenHard(porWordsMedium)
         }
     }
 }
@@ -86,8 +106,8 @@ function generate(){
 generate()
 
 function resetLogic(){
-        clearTimeout(to)
         generate()
+        clearTimeout(to)
         clearInterval(lvt)
         inputText.value = ""
         inputVerify.textContent = ""
@@ -375,12 +395,22 @@ langEng.addEventListener("click", function(){
 
 langUA.addEventListener("click", function(){
     generate()
-    langText.textContent = "UA"
+    langText.textContent = "Ua"
 })
 
 langGer.addEventListener("click", function(){
     generate()
     langText.textContent = "Ger"
+})
+
+langEs.addEventListener("click", function(){
+    generate()
+    langText.textContent = "Es"
+})
+
+langPor.addEventListener("click", function(){
+    generate()
+    langText.textContent = "Pt"
 })
 
 inputActivate.addEventListener("click", function(){
