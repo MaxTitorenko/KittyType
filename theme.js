@@ -5,7 +5,14 @@ let themeStd = document.getElementById("themeStandard"),
     themeSwamp = document.getElementById("themeSwamp"),
     themeCrimson = document.getElementById("themeCrimson"),
     themeHoney = document.getElementById("themeHoney"),
-    themeMidnight = document.getElementById("themeMidnight")
+    themeMidnight = document.getElementById("themeMidnight"),
+    themeMint = document.getElementById("themeMint"),
+    themeRedline = document.getElementById("themeRedline"),
+    themeChoco = document.getElementById("themeChoco"),
+    themeCherry = document.getElementById("themeCherry"),
+    themeCoffee = document.getElementById("themeCoffee"),
+    themeCobble = document.getElementById("themeCobble"),
+    themePeach = document.getElementById("themePeach")
     
 
 let root = document.documentElement;
@@ -30,7 +37,20 @@ if(theme == "standard"){
     setMidnight()
 }else if(theme == "mint"){
     setMint()
+}else if(theme == "redline"){
+    setRedline()
+}else if(theme == "choco"){
+    setChoco()
+}else if(theme == "cherry"){
+    setCherry()
+}else if(theme == "coffee"){
+    setCoffee()
+}else if(theme == "cobble"){
+    setCobble()
+}else if(theme == "peach"){
+    setPeach()
 }
+
 
 function setStandard(){
     root.style.setProperty("--bg-color", "#2D2F33")
@@ -113,6 +133,60 @@ function setMint(){
     root.style.setProperty("--svg-filter", "invert(16%) sepia(9%) saturate(6%) hue-rotate(11deg) brightness(90%) contrast(85%)")
 }
 
+function setRedline(){
+    root.style.setProperty("--bg-color", "#F0EFEF")
+    root.style.setProperty("--element-bg-color", "#F0DADA")
+    root.style.setProperty("--main-text-color", "#343434")
+    root.style.setProperty("--secondary-text-color", "#707070")
+    root.style.setProperty("--border-color", "#E91919")
+    root.style.setProperty("--svg-filter", "invert(8%) sepia(50%) saturate(7493%) hue-rotate(359deg) brightness(97%) contrast(108%)")
+}
+
+function setChoco(){
+    root.style.setProperty("--bg-color", "#E4D4C8")
+    root.style.setProperty("--element-bg-color", "#A47551")
+    root.style.setProperty("--main-text-color", "#343434")
+    root.style.setProperty("--secondary-text-color", "#E4E4E4")
+    root.style.setProperty("--border-color", "#523A28")
+    root.style.setProperty("--svg-filter", "invert(19%) sepia(22%) saturate(971%) hue-rotate(343deg) brightness(101%) contrast(88%)")
+}
+
+function setCherry(){
+    root.style.setProperty("--bg-color", "#F9CCD3")
+    root.style.setProperty("--element-bg-color", "#F1CED4")
+    root.style.setProperty("--main-text-color", "#343434")
+    root.style.setProperty("--secondary-text-color", "#707070")
+    root.style.setProperty("--border-color", "#391306")
+    root.style.setProperty("--svg-filter", "invert(13%) sepia(41%) saturate(4296%) hue-rotate(327deg) brightness(90%) contrast(119%)")
+}
+
+function setCoffee(){
+    root.style.setProperty("--bg-color", "#56382D")
+    root.style.setProperty("--element-bg-color", "#AE8B70")
+    root.style.setProperty("--main-text-color", "#fff")
+    root.style.setProperty("--secondary-text-color", "#DADADA")
+    root.style.setProperty("--border-color", "#F9FEFB")
+    root.style.setProperty("--svg-filter", "invert(100%) sepia(100%) saturate(0%) hue-rotate(2deg) brightness(102%) contrast(104%)")
+}
+
+function setCobble(){
+    root.style.setProperty("--bg-color", "#53565A")
+    root.style.setProperty("--element-bg-color", "#4B443C")
+    root.style.setProperty("--main-text-color", "#fff")
+    root.style.setProperty("--secondary-text-color", "#AEAEAE")
+    root.style.setProperty("--border-color", "#E4E5E8")
+    root.style.setProperty("--svg-filter", "invert(100%) sepia(100%) saturate(0%) hue-rotate(2deg) brightness(102%) contrast(104%)")
+}
+
+function setPeach(){
+    root.style.setProperty("--bg-color", "#FFCBA4")
+    root.style.setProperty("--element-bg-color", "#FF8976")
+    root.style.setProperty("--main-text-color", "#343434")
+    root.style.setProperty("--secondary-text-color", "#F6F6F6")
+    root.style.setProperty("--border-color", "#190204")
+    root.style.setProperty("--svg-filter", "invert(40%) sepia(75%) saturate(812%) hue-rotate(322deg) brightness(84%) contrast(88%)")
+}
+
 themeStd.addEventListener("click", function(event){
     event.preventDefault()
     setStandard()
@@ -165,4 +239,40 @@ themeMint.addEventListener("click", function(event){
     event.preventDefault()
     setMint()
     localStorage.setItem("theme", "mint")
+})
+
+themeRedline.addEventListener("click", function(event){
+    event.preventDefault()
+    setRedline()
+    localStorage.setItem("theme", "redline")
+})
+
+themeChoco.addEventListener("click", function(event){
+    event.preventDefault()
+    setChoco()
+    localStorage.setItem("theme", "choco")
+})
+
+themeCherry.addEventListener("click", function(event){
+    event.preventDefault()
+    setCherry()
+    localStorage.setItem("theme", "cherry")
+})
+
+themeCoffee.addEventListener("click", function(event){
+    event.preventDefault()
+    setCoffee()
+    localStorage.setItem("theme", "coffee")
+})
+
+themeCobble.addEventListener("click", function(event){
+    event.preventDefault()
+    setCobble()
+    localStorage.setItem("theme", "cobble")
+})
+
+themePeach.addEventListener("click", function(event){
+    event.preventDefault()
+    setPeach()
+    localStorage.setItem("theme", "peach")
 })
