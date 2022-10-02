@@ -144,9 +144,65 @@
                 <p>Raw WPM : <span id="rawWpm">0</span></p>
                 <p>Accuracy : <span id="acc">0</span>%</p>
                 <p>Characters (correct/wrong) : <span id="charCorrect">0</span> / <span id="charWrong">0</span></p>
+                <a href="" class="save-button" id="saveButton">Save Result</a>
             </div>
         </div>
     </div>
+
+    <div class="modal hidden" id="historyModal">
+        <div class="history-modal">
+            <div class="modal-close" id="closeHistory">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="history-head">History</h1>
+
+            <div class="history-elements" id="historyElements">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="logModal">
+        <div class="history-modal">
+            <div class="modal-close" id="closeLog">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="history-head">Sign Up/In</h1>
+
+            <form class="signup-form signup" id="signupForm">
+                <h2>Create new user</h2>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password">
+                </div>
+
+                <button>Sign Up</button>
+            </form>
+
+            <form class="signup-form login" id="loginForm">
+                <h2>Log in with existing account</h2>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password">
+                </div>
+
+                <button>Log In</button>
+            </form>
+        </div>
+    </div>
+
+    
 
     <header>
         <div class="container header">
@@ -160,10 +216,15 @@
             </div>
             </a>
 
+            <a href="" id="logButton" class="log">Sign Up/Sign In</a>
+            <p id="userid" class="uid"></p>
+
             <div class="header-side-menu">
+                <a href="" id="historyButton"><img src="svg/history.svg" class="svg side-menu-svg"></a>
                 <a href="" id="keyboardButton"><img src="svg/keyboard.svg" class="svg side-menu-svg"></a>
                 <a href="" id="infoButton"><img src="svg/info.svg" class="svg side-menu-svg"></a>
                 <a href="" id="settingsButton"><img src="svg/gear.svg" class="svg side-menu-svg gear-svg"></a>
+                <a href="" id="logout" class="logout"><img src="svg/logout.svg" class="svg side-menu-svg"></a>
             </div>
         </div>
     </header>
@@ -401,5 +462,6 @@
     <script src="textGen.js"></script>
     <script src="keyboard.js"></script>
     <script src="theme.js"></script>
+    <script src="bundle.js"></script>
 </body>
 </html>

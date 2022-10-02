@@ -43,6 +43,10 @@ a{
     display: none !important;
 }
 
+.remove-scrolling{
+    overflow: hidden;
+}
+
 .correct{
     color: #20FF1C;
 }
@@ -84,6 +88,18 @@ a{
     top: 130px;
     left: 0;
 }
+
+.save-button{
+    padding: .5em;
+    background-color: var(--element-bg-color);
+    border: var(--border-color)  1px solid;
+    border-radius: 50px;
+}
+
+.log, .uid{
+    align-self: center;
+}
+
 
 /* Logo */
 
@@ -388,7 +404,7 @@ a{
     z-index: 1;
 }
 
-.info-modal, .settings-modal, .language-modal, .result-modal{
+.info-modal, .settings-modal, .language-modal, .result-modal, .history-modal{
     position: absolute;
     border-radius: 50px;
     width: 50%;
@@ -401,7 +417,7 @@ a{
     overflow-y: scroll;
 }
 
-.info-head, .settings-head, .language-head{
+.info-head, .settings-head, .language-head, .history-head{
     text-align: center;
     margin: 0 auto;
     margin-top: -1.35em;
@@ -551,6 +567,80 @@ a{
     animation: beam 1s linear infinite;
 }
 
+/* History */
+
+.history-elements{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history-element{
+    padding: .3em 1em;
+    border: var(--border-color) 1px solid;
+    border-radius: 50px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: .5em;
+}
+
+/* SignUp */
+
+.signup-form{
+    text-align: center;
+}
+
+.signup-form div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form input{
+    background-color: var(--element-bg-color);
+    border: var(--border-color) 1px solid;
+    border-radius: 50px;
+    padding: .3em;
+    font-size: 1.2em;
+    color: var(--main-text-color);
+    outline: none;
+    margin: .5em 0;
+}
+
+.signup-form button{
+    background-color: var(--element-bg-color);
+    border: var(--border-color) 1px solid;
+    border-radius: 50px;
+    padding: .3em 1em;
+    color: var(--main-text-color);   
+    margin: .5em 0;
+    font-size: 1.2em;
+    transition: .3s background-color;
+    transition: .3s color;
+    outline: none;
+}
+
+.signup-form button:hover,
+.signup-form button:focus{
+    background-color: var(--bg-color);
+    color: var(--secondary-text-color);
+}
+
+.log{
+    border: var(--border-color) 1px solid;
+    border-radius: 50px;
+    padding: .5em 1em;
+    transition: .3s background-color;
+    transition: .3s color;
+}
+
+.log:hover, .log:focus{
+    background-color: var(--element-bg-color);
+    color: var(--secondary-text-color);
+}
+
 /* Animations */
 
 @keyframes gearRotate{
@@ -577,7 +667,7 @@ a{
 /* Media */
 
 @media(max-width: 1350px){
-    .info-modal, .settings-modal, .language-modal, .result-modal{
+    .info-modal, .settings-modal, .language-modal, .result-modal, .history-modal{
         width: 80%;
     }
 }
@@ -613,7 +703,7 @@ a{
 }
 
 @media(max-width: 830px){
-    .info-modal, .settings-modal, .language-modal, .result-modal{
+    .info-modal, .settings-modal, .language-modal, .result-modal, .history-modal{
         width: 95%;
     }
 }

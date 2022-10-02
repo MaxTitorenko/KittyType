@@ -415,7 +415,6 @@ langPor.addEventListener("click", function(){
 
 inputActivate.addEventListener("click", function(){
     inputActivate.style = "display: none"
-    console.log(inputActivate.classList)
     inputText.focus()
 })
 
