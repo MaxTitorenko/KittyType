@@ -80,20 +80,16 @@ window.addEventListener("resize", function(){
     if(window.screen.width < 600){
         notSupported.classList.remove("hidden")
         logo.classList.add("hidden")
-        document.classList.add("remove-scrolling")
     }else{
         notSupported.classList.add("hidden")
         logo.classList.remove("hidden")
-        document.classList.remove("remove-scrolling")
     }
 })
 
 if(window.screen.width < 600){
     notSupported.classList.remove("hidden")
     logo.classList.add("hidden")
-    document.classList.add("remove-scrolling")
 }else{
     notSupported.classList.add("hidden")
     logo.classList.remove("hidden")
-    document.classList.remove("remove-scrolling")
 }

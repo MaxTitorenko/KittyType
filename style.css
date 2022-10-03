@@ -76,7 +76,7 @@ a{
 }
 
 .not-supported-img{
-    width: 90%;
+    width: 70%;
 }
 
 .cover{
@@ -98,6 +98,10 @@ a{
 
 .log, .uid{
     align-self: center;
+}
+
+.uid{
+    font-weight: 600;
 }
 
 
@@ -709,9 +713,29 @@ a{
 }
 
 @media(max-width: 720px){
+
+    .logo-bottom{
+        font-size: 2em;
+        margin-top: .3em;
+    }
+
+    .logo-top{
+        font-size: 1em;
+    }
+
+    .logo-paw{
+        width: 50px;
+    }
+
     .input-window{
         min-height: 350px;
         max-height: 350px;
+    }
+}
+
+@media(max-width: 700px){
+    .history-element{
+        width: 99%;
     }
 }
 
@@ -722,26 +746,6 @@ a{
     }
 }
 
-@media(max-width: 573px){
-    .input-window{
-        min-height: 400px;
-        max-height: 400px;
-    }
-}
-
-@media(max-width: 545px){
-    .input-window{
-        min-height: 480px;
-        max-height: 480px;
-    }
-}
-
-/* @media(max-width: 475px){
-    .input-window{
-        min-height: 540px;
-        max-height: 540px;
-    }
-} */
 
 /* Scrollbar */
 
