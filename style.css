@@ -94,6 +94,13 @@ a{
     background-color: var(--element-bg-color);
     border: var(--border-color)  1px solid;
     border-radius: 50px;
+    transition: .3s background-color;
+    transition: .3s color;
+}
+
+.save-button:hover, .save-button:focus{
+    background-color: var(--bg-color);
+    color: var(--secondary-text-color);
 }
 
 .log, .uid{
