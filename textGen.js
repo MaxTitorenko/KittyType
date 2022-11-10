@@ -13,7 +13,24 @@ const spaWordsMedium = ["que", "Que", "de", "De", "no", "No","a", "A","la", "El"
 const porWordsEasy = ["pra", "também", "vocês", "quê", "algo", "obrigado", "dia", "esse", "lhe", "este", "ir", "deus", "essa", "oh", "melhor", "ainda", "temos", "cara", "sem", "pai", "sempre", "vida", "vez", "homem", "estamos", "talvez", "mãe", "anos", "alguém", "depois", "verdade", "claro", "boa", "nem", "pouco", "ficar", "coisas", "aí", "tinha", "dois", "falar", "deve", "antes", "pelo", "faz", "parece", "todo", "dele", "pessoas", "fora", "lugar", "apenas", "ei", "fazendo", "ninguém", "dinheiro", "acha", "vá", "comigo", "mundo", "preciso", "qual", "grande", "estar", "alguma", "hoje", "trabalho", "suas", "dar", "seja", "disso", "fez", "nome", "será", "novo", "filho", "outro", "qualquer", "quanto", "saber", "vão", "meus", "queria", "ok", "podemos", "nossa", "poderia", "outra", "olá", "precisa", "venha", "nosso", "mulher", "sinto", "desculpe", "toda", "diga", "hora", "daqui", "amor"]
 const porWordsMedium = ["pra", "Também","também", "vocês","Vocês", "Quê","quê", "algo","Algo", "obrigado","Obrigado","dia", "Esse","esse", "lhe", "este", "ir", "deus","Deus", "essa", "oh", "melhor","Melhor", "ainda", "temos","Temos", "cara","Cara", "sem", "pai", "sempre", "Sempre","vida", "vez", "homem","Homem", "estamos", "Talvez","talvez", "mãe", "anos", "Slguém","alguém", "depois", "Verdade","verdade", "claro", "boa", "nem", "Pouco","pouco", "ficar","Ficar", "coisas","Coisas", "aí", "tinha","Tinha", "dois", "falar", "deve", "antes", "Antes","pelo", "faz", "parece", "todo", "dele","Dele", "pessoas", "fora", "lugar","Lugar", "apenas", "ei", "fazendo","Fazendo", "ninguém", "dinheiro","Dinheiro", "acha", "vá", "comigo", "mundo", "preciso", "Preciso","qual", "grande", "estar", "alguma","Alguma", "hoje", "trabalho","Trabalho", "suas", "dar", "seja","Seja", "disso", "fez", "nome", "Será","será", "novo", "filho","Filho", "outro", "qualquer","Qualquer", "quanto", "saber", "vão","Vão", "meus", "queria", "ok", "podemos","Podemos", "nossa", "poderia", "outra", "olá","Olá", "precisa", "venha", "nosso","Nosso", "mulher", "sinto", "desculpe","Desculpe", "toda", "diga","Diga", "hora", "daqui","Daqui", "amor"]
 
+const lettersEngEasy = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+const lettersEngMedium = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+const lettersUaEasy = ["а","б","в","г","ґ","д","е","є","ж","з","и","і","ї","й","к","л","м","н","о","п","р","с","т","у","ф","х","ц","ч","ш","щ","ь","ю","я"]
+const lettersUaMedium = ["а","б","в","г","ґ","д","е","є","ж","з","и","і","ї","й","к","л","м","н","о","п","р","с","т","у","ф","х","ц","ч","ш","щ","ь","ю","я","А","Б","В","Г","Ґ","Д","Е","Є","Ж","З","И","І","Ї","Й","К","Л","М","Н","О","П","Р","С","Т","У","Ф","Ч","Ц","Ч","Ш","Щ","Ь","Ю","Я"]
+
+const lettersGerEasy = ["ä","ö","ü","ß","a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+const lettersGerMedium = ["ä","ö","ü","ß","Ä","Ö","Ü","ẞ","a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+const lettersSpaEasy = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"]
+const lettersSpaMedium = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+const lettersPorEasy = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+const lettersPorMedium = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
 const punctuation = [",",".",";",":","?","!"]
+
+const numberpack = [0,1,2,3,4,5,6,7,8,9]
 
 
 let textArea = document.getElementById("textArea"),
@@ -31,10 +48,19 @@ let langEng = document.getElementById("langEng"),
     langEs = document.getElementById("langEs"),
     langPor = document.getElementById("langPor")
 
-function textGen(array){
-    text = ""
+let words = document.getElementById("words"),
+    letters = document.getElementById("letters"),
+    numbers = document.getElementById("numbers"),
+    mode = document.getElementById("mode"),
+    difficulty = document.getElementById("difficulty")
 
-    for(let i = 0; i <=80; i++){
+function textGen(array, len){
+    text = ""
+    if (len == null){
+        len = 80
+    }
+
+    for(let i = 0; i <=len; i++){
         rng = Math.floor(Math.random() * array.length)
         text += array[rng] + " "
     }
@@ -44,10 +70,13 @@ function textGen(array){
     textArea.value = text
 }
 
-function textGenHard(array){
+function textGenHard(array, len){
     text = ""
+    if (len == null){
+        len = 70
+    }
 
-    for(let i = 0; i <=70; i++){
+    for(let i = 0; i <=len; i++){
         rng = Math.floor(Math.random() * array.length)
         rng2 = Math.floor(Math.random() * punctuation.length)
         if(Math.floor(Math.random()*10)>=7){
@@ -63,43 +92,149 @@ function textGenHard(array){
     textArea.value = text
 }
 
+function numberGen(array){
+    text = ""
+
+    for(let i = 0; i <=200; i++){
+        rng = Math.floor(Math.random() * array.length)
+        text += array[rng]
+        if(Math.floor(Math.random()*10)>=6){
+            text += " "
+        }
+    }
+    text = text.slice(0, -1)
+
+    textArea.textContent = text
+    textArea.value = text
+}
+
+function numberGenMed(array){
+    text = ""
+
+    for(let i = 0; i <=200; i++){
+        rng = Math.floor(Math.random() * array.length)
+        text += array[rng]
+        if(Math.floor(Math.random()*10)>=6){
+            text += "."
+        }
+        if(Math.floor(Math.random()*10)>=6){
+            text += " "
+        }
+    }
+    text = text.slice(0, -1)
+
+    textArea.textContent = text
+    textArea.value = text
+}
+
+function numberGenHard(array){
+    text = ""
+
+    for(let i = 0; i <=200; i++){
+        rng = Math.floor(Math.random() * array.length)
+        text += array[rng]
+        if(Math.floor(Math.random()*10)>=6){
+            if(Math.floor(Math.random()*10)>=5){
+                text += "."
+            }else{
+                text += ","
+            }
+        }
+        if(Math.floor(Math.random()*10)>=6){
+            text += " "
+        }
+    }
+    text = text.slice(0, -1)
+
+    textArea.textContent = text
+    textArea.value = text
+}
+
 function generate(){
-    if(diffEasy.checked){
-        if(langEng.checked){
-            textGen(engWordsEasy)
-        }else if(langUA.checked){
-            textGen(uaWordsEasy)
-        }else if(langGer.checked){
-            textGen(gerWordsEasy)
-        }else if(langEs.checked){
-            textGen(spaWordsEasy)
-        }else if(langPor.checked){
-            textGen(porWordsEasy)
+    if(words.checked){
+        if(diffEasy.checked){
+            if(langEng.checked){
+                textGen(engWordsEasy)
+            }else if(langUA.checked){
+                textGen(uaWordsEasy)
+            }else if(langGer.checked){
+                textGen(gerWordsEasy)
+            }else if(langEs.checked){
+                textGen(spaWordsEasy)
+            }else if(langPor.checked){
+                textGen(porWordsEasy)
+            }
+        }else if(diffMedium.checked){
+            if(langEng.checked){
+                textGen(engWordsMedium)
+            }else if(langUA.checked){
+                textGen(uaWordsMedium)
+            }else if(langGer.checked){
+                textGen(gerWordsMedium)
+            }else if(langEs.checked){
+                textGen(spaWordsMedium)
+            }else if(langPor.checked){
+                textGen(porWordsMedium)
+            }
+        }else if(diffHard.checked){
+            if(langEng.checked){
+                textGenHard(engWordsMedium)
+            }else if(langUA.checked){
+                textGenHard(uaWordsMedium)
+            }else if(langGer.checked){
+                textGenHard(gerWordsMedium)
+            }else if(langEs.checked){
+                textGenHard(spaWordsMedium)
+            }else if(langPor.checked){
+                textGenHard(porWordsMedium)
+            }
         }
-    }else if(diffMedium.checked){
-        if(langEng.checked){
-            textGen(engWordsMedium)
-        }else if(langUA.checked){
-            textGen(uaWordsMedium)
-        }else if(langGer.checked){
-            textGen(gerWordsMedium)
-        }else if(langEs.checked){
-            textGen(spaWordsMedium)
-        }else if(langPor.checked){
-            textGen(porWordsMedium)
+    }else if(letters.checked){
+        if(diffEasy.checked){
+            if(langEng.checked){
+                textGen(lettersEngEasy, 200)
+            }else if(langUA.checked){
+                textGen(lettersUaEasy, 200)
+            }else if(langGer.checked){
+                textGen(lettersGerEasy, 200)
+            }else if(langEs.checked){
+                textGen(lettersSpaEasy, 200)
+            }else if(langPor.checked){
+                textGen(lettersPorEasy, 200)
+            }
+        }else if(diffMedium.checked){
+            if(langEng.checked){
+                textGen(lettersEngMedium, 200)
+            }else if(langUA.checked){
+                textGen(lettersUaMedium, 200)
+            }else if(langGer.checked){
+                textGen(lettersGerMedium, 200)
+            }else if(langEs.checked){
+                textGen(lettersSpaMedium, 200)
+            }else if(langPor.checked){
+                textGen(lettersPorMedium, 200)
+            }
+        }else if(diffHard.checked){
+            if(langEng.checked){
+                textGenHard(lettersEngMedium, 200)
+            }else if(langUA.checked){
+                textGenHard(lettersUaMedium, 200)
+            }else if(langGer.checked){
+                textGenHard(lettersGerMedium, 200)
+            }else if(langEs.checked){
+                textGenHard(lettersSpaMedium, 200)
+            }else if(langPor.checked){
+                textGenHard(lettersPorMedium, 200)
+            }
         }
-    }else if(diffHard.checked){
-        if(langEng.checked){
-            textGenHard(engWordsMedium)
-        }else if(langUA.checked){
-            textGenHard(uaWordsMedium)
-        }else if(langGer.checked){
-            textGenHard(gerWordsMedium)
-        }else if(langEs.checked){
-            textGenHard(spaWordsMedium)
-        }else if(langPor.checked){
-            textGenHard(porWordsMedium)
-        }
+    }else if(numbers.checked){
+        if(diffEasy.checked){
+            numberGen(numberpack)
+        }else if(diffMedium.checked){
+            numberGenMed(numberpack)
+        }else if(diffHard.checked){
+            numberGenHard(numberpack)
+        } 
     }
 }
 
@@ -145,14 +280,32 @@ document.addEventListener('keydown', function(event){
 
 diffEasy.addEventListener("click", function(){
     generate()
+    difficulty.textContent = "Easy"
 })
 
 diffMedium.addEventListener("click", function(){
     generate()
+    difficulty.textContent = "Medium"
 })
 
 diffHard.addEventListener("click", function(){
     generate()
+    difficulty.textContent = "Hard"
+})
+
+words.addEventListener("click", function(){
+    generate()
+    mode.textContent = "Words"
+})
+
+letters.addEventListener("click", function(){
+    generate()
+    mode.textContent = "Letters"
+})
+
+numbers.addEventListener("click", function(){
+    generate()
+    mode.textContent = "Numbers"
 })
 
 let inputText = document.getElementById("inputText")

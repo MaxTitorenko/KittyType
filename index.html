@@ -144,6 +144,8 @@
                 <p>Raw WPM : <span id="rawWpm">0</span></p>
                 <p>Accuracy : <span id="acc">0</span>%</p>
                 <p>Characters (correct/wrong) : <span id="charCorrect">0</span> / <span id="charWrong">0</span></p>
+                <p>Mode : <span id="mode">0</span></p>
+                <p>Difficulty : <span id="difficulty">0</span></p>
                 <a href="" class="save-button" id="saveButton">Save Result</a>
             </div>
         </div>
@@ -262,6 +264,24 @@
 
                         <input type="radio" id="diffHard" name="diff" class="interface-radio">
                         <label for="diffHard" class="interface-radio-text">Hard</label>
+                    </form>
+                </div>
+            </div>
+
+            <span class="interface-line"></span>
+
+            <div class="interface-diff">
+                <img src="svg/mode.svg" class="svg interface-svg">
+                <div class="interface-diff-buttons">
+                    <form>
+                        <input type="radio" id="words" name="mode" class="interface-radio" checked>
+                        <label for="words" class="interface-radio-text">Words</label>
+
+                        <input type="radio" id="letters" name="mode" class="interface-radio">
+                        <label for="letters" class="interface-radio-text">Letters</label>
+
+                        <input type="radio" id="numbers" name="mode" class="interface-radio">
+                        <label for="numbers" class="interface-radio-text">Numbers</label>
                     </form>
                 </div>
             </div>
