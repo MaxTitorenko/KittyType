@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo&family=Jura:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../svg/paw.svg" />
+    <title>KittyType</title>
+</head>
+
+<body class="preload">
+
+    <div class="not-supported hidden" id="notSupported">
+        <img src="https://cdn.7tv.app/emote/62bca5936420068ac736a036/4x.gif" alt="" class="not-supported-img">
+        <h1>Ваш девайс не підтримується</h1>
+        <p>(розмір екрану не є оптимальним для комфортного використання веб-додатку)</p>
+    </div>
+
+    <div class="modal hidden" id="infoModal">
+        <div class="info-modal">
+            <div class="modal-close" id="closeInfo">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="info-head">Інформація</h1>
+
+            <div class="info-text">
+                <h2>Про додаток</h2>
+                <p>KittyType це веб-додаток для перевірки швидкості та точності друку.</p>
+                <h2>Вибір таймерів</h2>
+                <p>У вас є три опції для вибору на інтерфейсі: 15сек, 30сек та 60сек. <br>
+                    Ви можете вибрати один з них клікнувши на цифри на інтерфейсі.</p>
+                <h2>Вибір складності</h2>
+                <p>У вас є три опції для вибору на інтерфейсі: Легка, Середня та Складна. <br>
+                    Легка - генерує текст без великих букв та пунктуації. <br>
+                    Середня - генерує текст з великими буквами. <br>
+                    Складна - генерує текст з великими буквами та пунктуацією. <br>
+                    Ви можете вибрати одну з них клікнувши на назву на інтерфейсі.</p>
+                <h2>Гарячі клавіші</h2>
+                <p>Ви можете натиснути F2 замість кнопки знизу вікна з текстом щоб почати занову/згенерувати новий текст.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="settingsModal">
+        <div class="settings-modal">
+            <div class="modal-close" id="closeSettings">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="settings-head">Налаштування</h1>
+
+            <div class="settings-theme">
+                <h2>Теми</h2>
+                <div class="theme-buttons">
+                    <a href="" id="themeStandard" class="theme-button">Standard</a>
+                    <a href="" id="themeDark" class="theme-button">Dark</a>
+                    <a href="" id="themeLight" class="theme-button">Light</a>
+                    <a href="" id="themeLaguna" class="theme-button">Laguna</a>
+                    <a href="" id="themeSwamp" class="theme-button">Swamp</a>
+                    <a href="" id="themeCrimson" class="theme-button">Crimson</a>
+                    <a href="" id="themeHoney" class="theme-button">Honey</a>
+                    <a href="" id="themeMidnight" class="theme-button">Midnight</a>
+                    <a href="" id="themeMint" class="theme-button">Mint</a>
+                    <a href="" id="themeRedline" class="theme-button">Redline</a>
+                    <a href="" id="themeChoco" class="theme-button">Chocolate</a>
+                    <a href="" id="themeCherry" class="theme-button">Cherry</a>
+                    <a href="" id="themeCoffee" class="theme-button">Coffee</a>
+                    <a href="" id="themeCobble" class="theme-button">Cobble</a>
+                    <a href="" id="themePeach" class="theme-button">Peach</a>
+                </div>
+            </div>
+
+            <form class="verifier">
+                <h2>Верифікатори</h2>
+                <div>  
+                    <input type="radio" id="verifier1" name="verifier" checked>
+                    <label for="verifier1">Верифікатор V1</label>
+                </div>
+                <div>
+                    <input type="radio" id="verifier2" name="verifier">
+                    <label for="verifier2">Верифікатор V2</label>
+                </div>
+            </form>
+
+            <div class="lang-selector">
+                <h2>Мова</h2>
+                <div class="lang-selectors">
+                    <a href="../index.html" class="lang-selector-button"><img src="../svg/usa.svg" class="lang-flag">English</a>
+                    <a href="index.html" class="lang-selector-button"><img src="../svg/ua.svg" class="lang-flag">Українська</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="languageModal">
+        <div class="language-modal">
+            <div class="modal-close" id="closeLanguage">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="language-head">Мова друку</h1>
+
+            <form class="language-select">
+                <h3 align="center">Пам'ятайте змінити мову друку перед тим як друкувати на мові яку ви вибрали</h3>
+                <div>
+                    <input type="radio" id="langEng" name="lang" checked>
+                    <label for="langEng">Англійська/English</label>
+                </div>
+                <div>  
+                    <input type="radio" id="langUA" name="lang">
+                    <label for="langUA">Українська/Ukrainian</label>
+                </div>
+
+                <div>  
+                    <input type="radio" id="langGer" name="lang">
+                    <label for="langGer">Німецька/Deutsch</label>
+                </div>
+
+                <div>  
+                    <input type="radio" id="langEs" name="lang">
+                    <label for="langEs">Іспанська/Español</label>
+                </div>
+
+                <div>  
+                    <input type="radio" id="langPor" name="lang">
+                    <label for="langPor">Португальська/Português</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="resultModal">
+        <div class="result-modal">
+            <div class="modal-close" id="closeResult">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="language-head">Результати</h1>
+
+            <div class="result-info">
+                <canvas id="resultChart" class="result-canvas" style="width:65%;margin: 0 auto;"></canvas>
+                <p>WPM : <span id="wpm">0</span></p>
+                <p>Сирий WPM : <span id="rawWpm">0</span></p>
+                <p>Точність : <span id="acc">0</span>%</p>
+                <p>Символи (правильно/не правильно) : <span id="charCorrect">0</span> / <span id="charWrong">0</span></p>
+                <p>Режим : <span id="mode">0</span></p>
+                <p>Складність : <span id="difficulty">0</span></p>
+                <a href="" class="save-button" id="saveButton">Зберегти результат</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="historyModal">
+        <div class="history-modal">
+            <div class="modal-close" id="closeHistory">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="history-head">Історія результатів</h1>
+
+            <div class="history-elements" id="historyElements">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="logModal">
+        <div class="history-modal">
+            <div class="modal-close" id="closeLog">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <h1 class="history-head">Аккаунт</h1>
+
+            <form class="signup-form signup" id="signupForm">
+                <h2>Створити нового користувача</h2>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <label for="password">Пароль:</label>
+                    <input type="password" name="password">
+                </div>
+
+                <button>Зареєструватися</button>
+            </form>
+
+            <form class="signup-form login" id="loginForm">
+                <h2>Увійти в аккаунт</h2>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <label for="password">Пароль:</label>
+                    <input type="password" name="password">
+                </div>
+
+                <button>Увійти</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <header>
+        <div class="container header">
+            <a href="#">
+            <div class="logo" id="logo">
+                <img src="../svg/paw.svg" class="svg logo-paw">
+                <div class="logo-text">
+                    <h1 class="logo-bottom">KittyType</h1>
+                    <h2 class="logo-top">meow meow</h2>
+                </div>
+            </div>
+            </a>
+
+            <a href="" id="logButton" class="log">Аккаунт</a>
+            <p id="userid" class="uid"></p>
+
+            <div class="header-side-menu">
+                <a href="" id="historyButton"><img src="../svg/history.svg" class="svg side-menu-svg"></a>
+                <a href="" id="keyboardButton"><img src="../svg/keyboard.svg" class="svg side-menu-svg"></a>
+                <a href="" id="infoButton"><img src="../svg/info.svg" class="svg side-menu-svg"></a>
+                <a href="" id="settingsButton"><img src="../svg/gear.svg" class="svg side-menu-svg gear-svg"></a>
+                <a href="" id="logout" class="logout"><img src="../svg/logout.svg" class="svg side-menu-svg"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="interface">
+            <div class="interface-time">
+                <img src="../svg/clock.svg" class="svg interface-svg">
+                <div class="interface-time-buttons">
+                    <form>
+                        <input type="radio" id="time15" name="time" class="interface-radio" checked>
+                        <label for="time15" class="interface-radio-text">15</label>
+
+                        <input type="radio" id="time30" name="time" class="interface-radio">
+                        <label for="time30" class="interface-radio-text">30</label>
+
+                        <input type="radio" id="time60" name="time" class="interface-radio">
+                        <label for="time60" class="interface-radio-text">60</label>
+                    </form>
+                </div>
+            </div>
+
+            <span class="interface-line"></span>
+
+            <div class="interface-diff">
+                <img src="../svg/diff.svg" class="svg interface-svg">
+                <div class="interface-diff-buttons">
+                    <form>
+                        <input type="radio" id="diffEasy" name="diff" class="interface-radio" checked>
+                        <label for="diffEasy" class="interface-radio-text">Легка</label>
+
+                        <input type="radio" id="diffMedium" name="diff" class="interface-radio">
+                        <label for="diffMedium" class="interface-radio-text">Середня</label>
+
+                        <input type="radio" id="diffHard" name="diff" class="interface-radio">
+                        <label for="diffHard" class="interface-radio-text">Складна</label>
+                    </form>
+                </div>
+            </div>
+
+            <span class="interface-line"></span>
+
+            <div class="interface-diff">
+                <img src="../svg/mode.svg" class="svg interface-svg">
+                <div class="interface-diff-buttons">
+                    <form>
+                        <input type="radio" id="words" name="mode" class="interface-radio" checked>
+                        <label for="words" class="interface-radio-text">Слова</label>
+
+                        <input type="radio" id="letters" name="mode" class="interface-radio">
+                        <label for="letters" class="interface-radio-text">Літери</label>
+
+                        <input type="radio" id="numbers" name="mode" class="interface-radio">
+                        <label for="numbers" class="interface-radio-text">Цифри</label>
+                    </form>
+                </div>
+            </div>
+            <div class="cover hidden" id="cover"></div>
+        </div>
+        
+
+        <div>
+            <div class="lang-button-container container">
+                <div class="timer" >
+                    <h1>Таймер: <span id="timer">15</span></h1>
+                </div>
+
+                <div class="lang-button" id="languageButton">
+                    <img src="../svg/earth.svg" class="svg lang-svg">
+                    <h1 class="lang-button-text" id="langText">Eng</h1>
+                </div>
+            </div>
+
+            <div class="input-container container">
+                <textarea class="input-window" id="textArea"></textarea>
+                <div class="verify">
+                    <p class="input-window input-verify" id="inputVerify"></p>
+                    <div class="input-window input-activate" id="inputActivate">
+                        <h1 class="input-activate-text">Клікніть тут щоб почати друкувати</h1>
+                    </div>
+                </div>
+                <input type="text" id="inputText" class="input-text" placeholder="Click here to start typing">
+            </div>
+
+            <div class="replay-container">
+                <a href="" id="replayButton"><img src="../svg/replay.svg" class="svg replay-svg"></a>
+            </div>
+        </div>
+
+        <div class="replay-hotkey-container">
+            <h1 class="hotkey-text"><span class="hotkey-decoration">F2</span> - Почати заново / Згенерувати новий текст</h1>
+        </div>
+    </main>
+
+    <div class="moveable-keyboard hidden" id="keyboard">
+        <h1 class="keyboard-drag" id="keyboardDrag">Натисніть для того щоб перемістити</h1>
+        <div class="keyboard">
+            <div class="keyboard-row">
+
+                <div class="keyboard-key" id="keyQ">
+                    <h1 class="key-text">Q</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyW">
+                    <h1 class="key-text">W</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyE">
+                    <h1 class="key-text">E</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyR">
+                    <h1 class="key-text">R</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyT">
+                    <h1 class="key-text">T</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyY">
+                    <h1 class="key-text">Y</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyU">
+                    <h1 class="key-text">U</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyI">
+                    <h1 class="key-text">I</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyO">
+                    <h1 class="key-text">O</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyP">
+                    <h1 class="key-text">P</h1>
+                </div>
+
+                <div class="keyboard-key" id="key[">
+                    <h1 class="key-text">[{</h1>
+                </div>
+
+                <div class="keyboard-key" id="key]">
+                    <h1 class="key-text">]}</h1>
+                </div>
+
+            </div>
+
+            <div class="keyboard-row">
+
+                <div class="keyboard-key" id="keyA">
+                    <h1 class="key-text">A</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyS">
+                    <h1 class="key-text">S</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyD">
+                    <h1 class="key-text">D</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyF">
+                    <h1 class="key-text">F</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyG">
+                    <h1 class="key-text">G</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyH">
+                    <h1 class="key-text">H</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyJ">
+                    <h1 class="key-text">J</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyK">
+                    <h1 class="key-text">K</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyL">
+                    <h1 class="key-text">L</h1>
+                </div>
+
+                <div class="keyboard-key" id="key;">
+                    <h1 class="key-text">;:</h1>
+                </div>
+
+                <div class="keyboard-key" id="key'">
+                    <h1 class="key-text">'"</h1>
+                </div>
+
+            </div>
+
+            <div class="keyboard-row">
+
+                <div class="keyboard-key" id="keyZ">
+                    <h1 class="key-text">Z</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyX">
+                    <h1 class="key-text">X</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyC">
+                    <h1 class="key-text">C</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyV">
+                    <h1 class="key-text">V</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyB">
+                    <h1 class="key-text">B</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyN">
+                    <h1 class="key-text">N</h1>
+                </div>
+
+                <div class="keyboard-key" id="keyM">
+                    <h1 class="key-text">M</h1>
+                </div>
+
+                <div class="keyboard-key" id="key,">
+                    <h1 class="key-text">,</h1>
+                </div>
+
+                <div class="keyboard-key" id="key.">
+                    <h1 class="key-text">.</h1>
+                </div>
+
+                <div class="keyboard-key" id="key?">
+                    <h1 class="key-text">/?</h1>
+                </div>
+
+            </div>
+
+            <div class="keyboard-row">
+                <div class="keyboard-key-space" id="keySpace">
+                    <h1 class="space-text">____</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+    <script src="../scripts.js"></script>
+    <script src="../textGen.js"></script>
+    <script src="../keyboard.js"></script>
+    <script src="../theme.js"></script>
+    <script src="../bundle.js"></script>
+</body>
+</html>
