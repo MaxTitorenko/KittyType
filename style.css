@@ -192,7 +192,7 @@ a{
     border-radius: 50px;
     font-weight: 600;
     margin: 3em auto;
-    max-width: 670px;
+    max-width: 690px;
     width: 100%;
     justify-content: space-between;
 }
@@ -304,6 +304,36 @@ a{
 }
 
 .language-select label:hover{
+    color: var(--secondary-text-color);
+}
+
+.lang-selectors{
+    display: flex;
+    flex-direction: row;
+}
+
+.lang-flag{
+    width: 30px;
+    margin-bottom: -.4em;
+    margin-right: .5em;
+}
+
+.lang-selector-button{
+   padding: .5em 1em;
+   border: 1px solid var(--border-color);
+   border-radius: 50px;
+   max-width: 190px;
+   margin-bottom: 1em;
+   margin-right: 1em;
+   background-color: var(--element-bg-color);
+   text-align: center;
+   transition: .3s background-color;
+   transition: .3s color;
+}
+
+.lang-selector-button:hover,
+.lang-selector-button:focus{
+    background-color: var(--bg-color);
     color: var(--secondary-text-color);
 }
 
@@ -543,7 +573,7 @@ a{
 
 /* Settings modal */
 
-.settings-theme, .verifier{
+.settings-theme, .verifier, .lang-selector{
     padding: 1em;
     display: flex;
     flex-direction: column;

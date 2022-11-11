@@ -280,32 +280,26 @@ document.addEventListener('keydown', function(event){
 
 diffEasy.addEventListener("click", function(){
     generate()
-    difficulty.textContent = "Easy"
 })
 
 diffMedium.addEventListener("click", function(){
     generate()
-    difficulty.textContent = "Medium"
 })
 
 diffHard.addEventListener("click", function(){
     generate()
-    difficulty.textContent = "Hard"
 })
 
 words.addEventListener("click", function(){
     generate()
-    mode.textContent = "Words"
 })
 
 letters.addEventListener("click", function(){
     generate()
-    mode.textContent = "Letters"
 })
 
 numbers.addEventListener("click", function(){
     generate()
-    mode.textContent = "Numbers"
 })
 
 let inputText = document.getElementById("inputText")
@@ -471,7 +465,7 @@ function timing(time){
         }else if(numbers.checked){
             mode.textContent = "Numbers"
         }
-                               
+
         wpm.textContent = wpmVal
         rawWpm.textContent = rawVal
 
