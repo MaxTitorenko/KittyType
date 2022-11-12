@@ -241,6 +241,7 @@ function generate(){
 generate()
 
 function resetLogic(){
+        cover.classList.add("hidden")
         generate()
         clearTimeout(to)
         clearInterval(lvt)
@@ -253,18 +254,30 @@ function resetLogic(){
         graphWrong = []
 
         if(time15.checked){
-            timing(15000)
             timeVal = 15
             timer.textContent = 15
         }else if(time30.checked){
-            timing(30000)
             timeVal = 30
             timer.textContent = 30
         }else if(time60.checked){
-            timing(60000)
             timeVal = 60
             timer.textContent = 60
         }
+
+        inputText.addEventListener("keydown", function(event){
+    
+            if(time15.checked){
+                timing(15000)
+                timeVal = 15
+            }else if(time30.checked){
+                timing(30000)
+                timeVal = 30
+            }else if(time60.checked){
+                timing(60000)
+                timeVal = 60
+            }
+            
+        }, {once:true})
 }
 
 replayButton.addEventListener("click", function(event){
@@ -311,22 +324,44 @@ inputCount = -1
 correctInput = 0
 wrongInput = 0
 
+utilKeys = ["Backspace","Tab","Meta" ,"Control", "Alt", "CapsLock", "Shift", "Enter", "F2", "F1", "F3", "F4"]
+
+
 inputText.addEventListener("keydown", function(event){
     inputCount += 1
     
     if(verifier1.checked){
-        if(event.key == "Shift"){ inputCount -= 1}
-        else if(event.key == text[inputCount]){
-            if(event.key == " "){
-                inputVerify.innerHTML += "<span class='correct writing-line invisible'>"+"!"+"</span>"
-            }else{
-                inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
+
+        
+            if(utilKeys.includes(event.key)){ inputCount -= 1}
+            else if(event.key == text[inputCount]){
+                if(event.key == " "){
+                    inputVerify.innerHTML += "<span class='correct writing-line invisible'>"+"!"+"</span>"
+                }else{
+                    inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
+                }
+                correctInput += 1
+            }else if(event.key !== text[inputCount]){
+                if(text[inputCount] == " "){
+                    inputVerify.innerHTML += "<span class='wrong writing-line'>"+"!"+"</span>"
+                }else{
+                    inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
+                }
+                wrongInput += 1
+            } 
+
+            if(event.key == "Backspace"){
+                if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
+                    correctInput -= 1
+                }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
+                    wrongInput -= 1
+                }
+                
+                inputVerify.children[inputVerify.children.length-1].remove()
+                inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
+                inputCount -= 1
             }
-            correctInput += 1
-        }else{
-         inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
-            wrongInput += 1
-        }
+        
 
         if(inputCount>0){
             inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("writing-line")
@@ -335,10 +370,11 @@ inputText.addEventListener("keydown", function(event){
                 inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("invisible")
             }
         }
+    
 
         
     }else if(verifier2.checked){
-        if(event.key == "Shift"){ inputCount -= 1 }
+        if(utilKeys.includes(event.key)){ inputCount -= 1 }
         else if(event.key == text[inputCount]){
             if(event.key == " "){
                 inputVerify.innerHTML += "<span class='correct writing-line invisible'>"+"!"+"</span>"
@@ -349,6 +385,18 @@ inputText.addEventListener("keydown", function(event){
         }else{
          inputVerify.innerHTML += "<span class='wrong writing-line'>"+event.key+"</span>"
             wrongInput += 1
+        }
+
+        if(event.key == "Backspace"){
+            if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
+                correctInput -= 1
+            }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
+                wrongInput -= 1
+            }
+            
+            inputVerify.children[inputVerify.children.length-1].remove()
+            inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
+            inputCount -= 1
         }
 
         if(inputCount>0){
