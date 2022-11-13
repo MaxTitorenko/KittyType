@@ -250,6 +250,8 @@ function resetLogic(){
         inputCount = -1
         correctInput = 0
         wrongInput = 0
+        correctGraph = 0
+        wrongGraph = 0
         graphCorrect = []
         graphWrong = []
 
@@ -323,6 +325,8 @@ let verifier2 = document.getElementById("verifier2")
 inputCount = -1
 correctInput = 0
 wrongInput = 0
+correctGraph = 0
+wrongGraph = 0
 
 utilKeys = ["Backspace","Tab","Meta" ,"Control", "Alt", "CapsLock", "Shift", "Enter", "F2", "F1", "F3", "F4"]
 
@@ -341,6 +345,7 @@ inputText.addEventListener("keydown", function(event){
                     inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
                 }
                 correctInput += 1
+                correctGraph = correctInput
             }else if(event.key !== text[inputCount]){
                 if(text[inputCount] == " "){
                     inputVerify.innerHTML += "<span class='wrong writing-line'>"+"!"+"</span>"
@@ -348,18 +353,21 @@ inputText.addEventListener("keydown", function(event){
                     inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
                 }
                 wrongInput += 1
+                wrongGraph = wrongInput
             } 
 
             if(event.key == "Backspace"){
-                if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
-                    correctInput -= 1
-                }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
-                    wrongInput -= 1
+                if(inputCount>0){
+                    if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
+                        correctInput -= 1
+                    }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
+                        wrongInput -= 1
+                    }
+                    
+                    inputVerify.children[inputVerify.children.length-1].remove()
+                    inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
+                    inputCount -= 1
                 }
-                
-                inputVerify.children[inputVerify.children.length-1].remove()
-                inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
-                inputCount -= 1
             }
         
 
@@ -382,21 +390,25 @@ inputText.addEventListener("keydown", function(event){
                 inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
             }
             correctInput += 1
+            correctGraph = correctInput
         }else{
          inputVerify.innerHTML += "<span class='wrong writing-line'>"+event.key+"</span>"
             wrongInput += 1
+            wrongGraph = wrongInput
         }
 
         if(event.key == "Backspace"){
-            if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
-                correctInput -= 1
-            }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
-                wrongInput -= 1
+            if(inputCount>0){
+                if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
+                    correctInput -= 1
+                }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
+                    wrongInput -= 1
+                }
+                
+                inputVerify.children[inputVerify.children.length-1].remove()
+                inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
+                inputCount -= 1
             }
-            
-            inputVerify.children[inputVerify.children.length-1].remove()
-            inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
-            inputCount -= 1
         }
 
         if(inputCount>0){
@@ -450,18 +462,18 @@ function timing(time){
         timeVal -= 1
         
         if(graphCorrect.length==0){
-            graphCorrect.push(correctInput)
+            graphCorrect.push(correctGraph)
         }else{
             sum1 += graphCorrect[arrayNorm1]
-            graphCorrect.push(correctInput-sum1)
+            graphCorrect.push(correctGraph-sum1)
             arrayNorm1 += 1
         }
 
         if(graphWrong.length==0){
-            graphWrong.push(wrongInput)
+            graphWrong.push(wrongGraph)
         }else{
             sum2 += graphWrong[arrayNorm2]
-            graphWrong.push(wrongInput-sum2)
+            graphWrong.push(wrongGraph-sum2)
             arrayNorm2 += 1
         }
 
@@ -541,6 +553,8 @@ function timing(time){
 
         correctInput = 0
         wrongInput = 0
+        correctGraph = 0
+        wrongGraph = 0
         graphCorrect = []
         graphWrong = []
 

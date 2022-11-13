@@ -328,13 +328,11 @@ a{
    background-color: var(--element-bg-color);
    text-align: center;
    transition: .3s background-color;
-   transition: .3s color;
 }
 
 .lang-selector-button:hover,
 .lang-selector-button:focus{
     background-color: var(--bg-color);
-    color: var(--secondary-text-color);
 }
 
 /* Input */
