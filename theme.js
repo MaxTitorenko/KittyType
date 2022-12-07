@@ -20,7 +20,7 @@ let root = document.documentElement;
 let theme = localStorage.getItem("theme")
 
 if(theme == "standard"){
-    setStandard
+    setStandard()
 }else if(theme == "dark"){
     setDark()
 }else if(theme == "light"){
