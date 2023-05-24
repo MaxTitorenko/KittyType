@@ -89,6 +89,16 @@ a{
     left: 0;
 }
 
+.cover-letter-mode{
+    position: absolute;
+    content: " ";
+    background: #ffffff00;
+    width: 100%;
+    height: 80px;
+    top: 230px;
+    left: 0;
+}
+
 .save-button{
     padding: .5em;
     background-color: var(--element-bg-color);
@@ -184,7 +194,7 @@ a{
 
 /* Interface */
 
-.interface{
+.interface, .interface-letter-mode, .interface-letter-mode-ua{
     display: flex;
     padding: .5em;
     border: var(--border-color) 2px solid;
@@ -195,6 +205,14 @@ a{
     max-width: 690px;
     width: 100%;
     justify-content: space-between;
+}
+
+.interface-letter-mode{
+    max-width: 450px;
+}
+
+.interface-letter-mode-ua{
+    max-width: 520px;
 }
 
 .interface-time, .interface-diff{

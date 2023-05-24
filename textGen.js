@@ -28,6 +28,21 @@ const lettersSpaMedium = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m
 const lettersPorEasy = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 const lettersPorMedium = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
+const lettersAMEasy = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m"]
+const lettersAMMedium = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","A","B","C","D","E","F","G","H","I","J","K","L","M"]
+
+const lettersMZEasy = ["m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+const lettersMZMedium = ["m","n","o","p","q","r","s","t","u","v","w","x","y","z","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+const lettersD1Easy = ["t","y","f","g","h","v","b"]
+const lettersD1MEdium = ["t","y","f","g","h","v","b","T","Y","F","G","H","V","B"]
+
+const lettersD2Easy = ["t","y","f","g","h","v","b","e","d","c","u","j","n"]
+const lettersD2MEdium = ["t","y","f","g","h","v","b","e","d","c","u","j","n","T","Y","F","G","H","V","B","E","D","C","U","J","N"]
+
+const lettersD3Easy = ["t","y","f","g","h","v","b","e","d","c","u","j","n","w","s","x","i","k","m"]
+const lettersD3MEdium = ["t","y","f","g","h","v","b","e","d","c","u","j","n","w","s","x","i","k","m","T","Y","F","G","H","V","B","E","D","C","U","J","N","W","S","X","I","K","M"]
+
 const punctuation = [",",".",";",":","?","!"]
 
 const numberpack = [0,1,2,3,4,5,6,7,8,9]
@@ -35,7 +50,8 @@ const numberpack = [0,1,2,3,4,5,6,7,8,9]
 
 let textArea = document.getElementById("textArea"),
     replayButton = document.getElementById("replayButton"),
-    cover = document.getElementById("cover")
+    cover = document.getElementById("cover"),
+    coverLetter = document.getElementById("coverLetter")
 
 
 let diffEasy = document.getElementById("diffEasy"),
@@ -50,6 +66,13 @@ let langEng = document.getElementById("langEng"),
 
 let words = document.getElementById("words"),
     letters = document.getElementById("letters"),
+    interfaceLetters = document.getElementById("interfaceLetters"),
+    modeDefault = document.getElementById("modeDefault"),
+    modeAM = document.getElementById("modeAM"),
+    modeMZ = document.getElementById("modeMZ"),
+    modeD1 = document.getElementById("modeD1"),
+    modeD2 = document.getElementById("modeD2"),
+    modeD3 = document.getElementById("modeD3"),
     numbers = document.getElementById("numbers"),
     mode = document.getElementById("mode"),
     difficulty = document.getElementById("difficulty")
@@ -192,39 +215,219 @@ function generate(){
     }else if(letters.checked){
         if(diffEasy.checked){
             if(langEng.checked){
-                textGen(lettersEngEasy, 200)
+                if(modeDefault.checked){
+                    textGen(lettersEngEasy, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMEasy, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZEasy, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1Easy, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2Easy, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3Easy, 200)
+                }
             }else if(langUA.checked){
-                textGen(lettersUaEasy, 200)
+                if(modeDefault.checked){
+                    textGen(lettersUaEasy, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMEasy, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZEasy, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1Easy, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2Easy, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3Easy, 200)
+                }
             }else if(langGer.checked){
-                textGen(lettersGerEasy, 200)
+                if(modeDefault.checked){
+                    textGen(lettersGerEasy, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMEasy, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZEasy, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1Easy, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2Easy, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3Easy, 200)
+                }
             }else if(langEs.checked){
-                textGen(lettersSpaEasy, 200)
+                if(modeDefault.checked){
+                    textGen(lettersSpaEasy, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMEasy, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZEasy, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1Easy, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2Easy, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3Easy, 200)
+                }
             }else if(langPor.checked){
-                textGen(lettersPorEasy, 200)
+                if(modeDefault.checked){
+                    textGen(lettersPorEasy, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMEasy, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZEasy, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1Easy, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2Easy, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3Easy, 200)
+                }
             }
         }else if(diffMedium.checked){
             if(langEng.checked){
-                textGen(lettersEngMedium, 200)
+                if(modeDefault.checked){
+                    textGen(lettersEngMedium, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3MEdium, 200)
+                }
             }else if(langUA.checked){
-                textGen(lettersUaMedium, 200)
+                if(modeDefault.checked){
+                    textGen(lettersUaMedium, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3MEdium, 200)
+                }
             }else if(langGer.checked){
-                textGen(lettersGerMedium, 200)
+                if(modeDefault.checked){
+                    textGen(lettersGerMedium, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3MEdium, 200)
+                }
             }else if(langEs.checked){
-                textGen(lettersSpaMedium, 200)
+                if(modeDefault.checked){
+                    textGen(lettersSpaMedium, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3MEdium, 200)
+                }
             }else if(langPor.checked){
-                textGen(lettersPorMedium, 200)
+                if(modeDefault.checked){
+                    textGen(lettersPorMedium, 200)
+                }else if(modeAM.checked){
+                    textGen(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGen(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGen(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGen(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGen(lettersD3MEdium, 200)
+                }
             }
         }else if(diffHard.checked){
             if(langEng.checked){
-                textGenHard(lettersEngMedium, 200)
+                if(modeDefault.checked){
+                    textGenHard(lettersEngMedium, 200)
+                }else if(modeAM.checked){
+                    textGenHard(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGenHard(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGenHard(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGenHard(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGenHard(lettersD3MEdium, 200)
+                }
             }else if(langUA.checked){
-                textGenHard(lettersUaMedium, 200)
+                if(modeDefault.checked){
+                    textGenHard(lettersUaMedium, 200)
+                }else if(modeAM.checked){
+                    textGenHard(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGenHard(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGenHard(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGenHard(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGenHard(lettersD3MEdium, 200)
+                }
             }else if(langGer.checked){
-                textGenHard(lettersGerMedium, 200)
+                if(modeDefault.checked){
+                    textGenHard(lettersGerMedium, 200)
+                }else if(modeAM.checked){
+                    textGenHard(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGenHard(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGenHard(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGenHard(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGenHard(lettersD3MEdium, 200)
+                }
             }else if(langEs.checked){
-                textGenHard(lettersSpaMedium, 200)
+                if(modeDefault.checked){
+                    textGenHard(lettersSpaMedium, 200)
+                }else if(modeAM.checked){
+                    textGenHard(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGenHard(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGenHard(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGenHard(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGenHard(lettersD3MEdium, 200)
+                }
             }else if(langPor.checked){
-                textGenHard(lettersPorMedium, 200)
+                if(modeDefault.checked){
+                    textGenHard(lettersPorMedium, 200)
+                }else if(modeAM.checked){
+                    textGenHard(lettersAMMedium, 200)
+                }else if(modeMZ.checked){
+                    textGenHard(lettersMZMedium, 200)
+                }else if(modeD1.checked){
+                    textGenHard(lettersD1MEdium, 200)
+                }else if(modeD2.checked){
+                    textGenHard(lettersD2MEdium, 200)
+                }else if(modeD3.checked){
+                    textGenHard(lettersD3MEdium, 200)
+                }
             }
         }
     }else if(numbers.checked){
@@ -241,10 +444,11 @@ function generate(){
 generate()
 
 function resetLogic(){
-        cover.classList.add("hidden")
-        generate()
         clearTimeout(to)
         clearInterval(lvt)
+        cover.classList.add("hidden")
+        coverLetter.classList.add("hidden")
+        generate()
         inputText.value = ""
         inputVerify.textContent = ""
         inputCount = -1
@@ -267,6 +471,9 @@ function resetLogic(){
         }
 
         inputText.addEventListener("keydown", function(event){
+
+            clearTimeout(to)
+            clearInterval(lvt)
     
             if(time15.checked){
                 timing(15000)
@@ -306,14 +513,41 @@ diffHard.addEventListener("click", function(){
 })
 
 words.addEventListener("click", function(){
+    interfaceLetters.classList.add("hidden")
     generate()
 })
 
 letters.addEventListener("click", function(){
+    interfaceLetters.classList.remove("hidden")
     generate()
 })
 
 numbers.addEventListener("click", function(){
+    interfaceLetters.classList.add("hidden")
+    generate()
+})
+
+modeDefault.addEventListener("click", function(){
+    generate()
+})
+
+modeAM.addEventListener("click", function(){
+    generate()
+})
+
+modeMZ.addEventListener("click", function(){
+    generate()
+})
+
+modeD1.addEventListener("click", function(){
+    generate()
+})
+
+modeD2.addEventListener("click", function(){
+    generate()
+})
+
+modeD3.addEventListener("click", function(){
     generate()
 })
 
@@ -321,12 +555,14 @@ let inputText = document.getElementById("inputText")
 let inputVerify = document.getElementById("inputVerify")
 let verifier1 = document.getElementById("verifier1")
 let verifier2 = document.getElementById("verifier2")
+let verifier3 = document.getElementById("verifier3")
 
 inputCount = -1
 correctInput = 0
 wrongInput = 0
 correctGraph = 0
 wrongGraph = 0
+prevInput = 1
 
 utilKeys = ["Backspace","Tab","Meta" ,"Control", "Alt", "CapsLock", "Shift", "Enter", "F2", "F1", "F3", "F4"]
 
@@ -423,7 +659,62 @@ inputText.addEventListener("keydown", function(event){
             }
         }
 
+    }else if(verifier3.checked){
+
+        
+        if(utilKeys.includes(event.key)){ inputCount -= 1}
+        else if(event.key == text[inputCount]){
+            if(event.key == " "){
+                inputVerify.innerHTML += "<span class='correct writing-line invisible'>"+"!"+"</span>"
+            }else{
+                inputVerify.innerHTML += "<span class='correct writing-line'>"+text[inputCount]+"</span>"
+            }
+            correctInput += 1
+            correctGraph = correctInput
+            prevInput = 1
+        }else if(event.key !== text[inputCount]){
+            if(prevInput == 0){
+                wrongInput -= 1
+                inputCount -=1
+            }else{
+                if(text[inputCount] == " "){
+                    inputVerify.innerHTML += "<span class='wrong writing-line'>"+"!"+"</span>"
+                }else{
+                    inputVerify.innerHTML += "<span class='wrong writing-line'>"+text[inputCount]+"</span>"
+                }
+            }
+            
+            wrongInput += 1
+            wrongGraph = wrongInput
+            prevInput = 0
+        } 
+
+        if(event.key == "Backspace"){
+            if(inputCount>0){
+                if(inputVerify.children[inputVerify.children.length-1].classList.contains("correct")){
+                    correctInput -= 1
+                }else if(inputVerify.children[inputVerify.children.length-1].classList.contains("wrong")){
+                    wrongInput -= 1
+                }
+                
+                inputVerify.children[inputVerify.children.length-1].remove()
+                inputVerify.children[inputVerify.children.length-1].classList.add("writing-line")
+                inputCount -= 1
+            }
+        }
+    
+
+    if(inputCount>0){
+        inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("writing-line")
+        if(text[inputCount-1] == " "){
+            inputVerify.getElementsByTagName("span")[inputCount-1].textContent = " "
+            inputVerify.getElementsByTagName("span")[inputCount-1].classList.remove("invisible")
+        }
     }
+
+
+    
+}
 
     inputText.addEventListener("keyup", function(){
         if(text.length == inputText.value.length){
@@ -457,6 +748,7 @@ function timing(time){
     sum1 = 0
     sum2 = 0
     cover.classList.remove("hidden")
+    coverLetter.classList.remove("hidden")
 
     lvt = setInterval(function(){timer.textContent = timeVal - 1
         timeVal -= 1
@@ -482,6 +774,7 @@ function timing(time){
     to = setTimeout(function(){resultModal.classList.remove("hidden")
         inputText.blur()
         cover.classList.add("hidden")
+        coverLetter.classList.add("hidden")
         clearInterval(lvt)
         generate()
         inputText.value = ""

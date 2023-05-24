@@ -87,6 +87,10 @@
                     <input type="radio" id="verifier2" name="verifier">
                     <label for="verifier2">Verifier V2</label>
                 </div>
+                <div>
+                    <input type="radio" id="verifier3" name="verifier">
+                    <label for="verifier3">Verifier V3 (EZ mode)</label>
+                </div>
             </form>
 
             <div class="lang-selector">
@@ -294,6 +298,34 @@
                 </div>
             </div>
             <div class="cover hidden" id="cover"></div>
+        </div>
+
+        <div class="interface-letter-mode hidden" id="interfaceLetters">
+
+            <div class="interface-diff">
+                <div class="interface-diff-buttons">
+                    <form>
+                        <input type="radio" id="modeDefault" name="lmode" class="interface-radio" checked>
+                        <label for="modeDefault" class="interface-radio-text">Default</label>
+
+                        <input type="radio" id="modeAM" name="lmode" class="interface-radio">
+                        <label for="modeAM" class="interface-radio-text">A-M</label>
+
+                        <input type="radio" id="modeMZ" name="lmode" class="interface-radio">
+                        <label for="modeMZ" class="interface-radio-text">M-Z</label>
+
+                        <input type="radio" id="modeD1" name="lmode" class="interface-radio">
+                        <label for="modeD1" class="interface-radio-text">Depth 1</label>
+
+                        <input type="radio" id="modeD2" name="lmode" class="interface-radio">
+                        <label for="modeD2" class="interface-radio-text">Depth 2</label>
+
+                        <input type="radio" id="modeD3" name="lmode" class="interface-radio">
+                        <label for="modeD3" class="interface-radio-text">Depth 3</label>
+                    </form>
+                </div>
+            </div>
+            <div class="cover-letter-mode hidden" id="coverLetter"></div>
         </div>
         
 
